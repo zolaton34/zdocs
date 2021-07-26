@@ -10,6 +10,6 @@ jobs:
       #    node-version: '14'
       #- run: npm install -g bats
       #- run: bats -v
-      - uses: actions/github-actions-hello@v1
-        with: 
-          who-to-greet: 'Jumalo Coxit'
+      - uses: getsentry/action-git-diff-suggestions@main
+        with:
+          message: 'Testing diff'
