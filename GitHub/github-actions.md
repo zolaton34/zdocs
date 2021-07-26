@@ -58,7 +58,7 @@ Used to build, test, package, release, or deploy a project on GitHub.
   * in the code repository
   * special constraint: workspace_dispatch (manually) triggered must be stored in the default branch
 ```yaml
-name: learn-github-actions
+name: learn-github-actions # Optional - The name of the workflow as it will appear in the Actions tab of the GitHub repository.
 on: [push]
 jobs:
   check-bats-version:
