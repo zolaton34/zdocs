@@ -10,6 +10,12 @@ jobs:
       #    node-version: '14'
       #- run: npm install -g bats
       #- run: bats -v
-      - uses: getsentry/action-git-diff-suggestions@main
+      #- uses: getsentry/action-git-diff-suggestions@main
+      #  with:
+      #    message: 'Testing diff'
+      - uses: actions/checkout@v2
+      - uses: actions/setup-java@v2
         with:
-          message: 'Testing diff'
+          distribution: 'adopt' # See 'Supported distributions' for available options
+          java-version: '11'
+      - run: java -cp java HelloWorldApp
