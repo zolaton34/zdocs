@@ -89,8 +89,12 @@ Action can be defined in:
 * The same repository where it is used
 * A published Docker container image on Docker Hub
 * [GitHub Marketplace](https://github.com/marketplace?type=actions)
-
-
+# Browsing Marketplace actions in the workflow editor
+You can [search and browse actions directly in your repository's](https://docs.github.com/en/actions/learn-github-actions/finding-and-customizing-actions#browsing-marketplace-actions-in-the-workflow-editor) workflow editor.
+# [Adding an action to your workflow](https://docs.github.com/en/actions/learn-github-actions/finding-and-customizing-actions#adding-an-action-to-your-workflow)
+In you workflow editor 
+* Navigate to the action you want to use in your workflow.
+* Under "Installation", copy the workflow syntax.
 ## References
 * [Learn GitHub Actions](https://docs.github.com/en/actions/learn-github-actions)
 * [GitHub Community Support's GitHub Actions category](https://github.community/c/code-to-cloud/github-actions/41)
