@@ -67,12 +67,18 @@ on: [push]
 jobs:
   # check-bats-version job
   check-bats-version:
+    # configure runner
     runs-on: ubuntu-latest
+    # groups all steps in check-bats-version job
     steps:
+      # uses keyword to retrieve the community action actions/checkout@v2
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
+      # input values for actions/setup-node@v2
         with:
+          # input value for parameter node-version of actions/setup-node@v2
           node-version: '14'
+      # runs a command
       - run: npm install -g bats
       - run: bats -v
 ```
