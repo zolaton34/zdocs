@@ -20,6 +20,6 @@ jobs:
           java-version: '11'
       - run: javac *.java
       - run: ls -la
-      - run: java -cp java HelloWorld
+      - run: java -cp . HelloWorld
      
 
