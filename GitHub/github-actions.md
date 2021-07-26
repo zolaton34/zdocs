@@ -57,3 +57,17 @@ Used to build, test, package, release, or deploy a project on GitHub.
 * stored in a directory called .github/workflows
   * in the code repository
   * special constraint: workspace_dispatch (manually) triggered must be stored in the default branch
+```yaml
+name: learn-github-actions
+on: [push]
+jobs:
+  check-bats-version:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - run: npm install -g bats
+      - run: bats -v
+```
