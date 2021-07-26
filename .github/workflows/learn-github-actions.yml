@@ -4,9 +4,12 @@ jobs:
   check-bats-version:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
-        with:
-          node-version: '14'
-      - run: npm install -g bats
-      - run: bats -v
+      #- uses: actions/checkout@v2
+      #- uses: actions/setup-node@v2
+      #  with:
+      #    node-version: '14'
+      #- run: npm install -g bats
+      #- run: bats -v
+      - uses: actions/github-actions-hello@v1
+        with: 
+          who-to-greet: 'Jumalo Coxit'
