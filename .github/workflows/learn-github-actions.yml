@@ -22,7 +22,7 @@ jobs:
       #- run: ls -la
       #- run: java -cp . HelloWorld
       - name: Testing secrets
-        run: echo "**{{ secrets.GITHUB_TOKEN }}**"
+        run: echo {{ secrets.GITHUB_TOKEN }}
       #- name: First interaction
       #  uses: actions/first-interaction@v1.1.0
       #  with:
