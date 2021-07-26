@@ -64,7 +64,7 @@ Used to build, test, package, release, or deploy a project on GitHub.
 * uses YAML syntax
 * stored in a directory called .github/workflows
   * in the code repository
-  * special constraint: workspace_dispatch (manually) triggered must be stored in the default branch
+  * special constraint: workflow_dispatch (manually) triggered must be stored in the default branch
 ```yaml
 # Optional - The name of the workflow as it will appear in the Actions tab of the GitHub repository.
 name: learn-github-actions
@@ -109,10 +109,30 @@ In you workflow editor
 ### Using release management for your custom actions [docs](https://docs.github.com/en/actions/learn-github-actions/finding-and-customizing-actions#using-release-management-for-your-custom-actions)
 Community action have the option to use tags, branches, or SHA values to manage releases.
 #### Using tags
+* Can decide changes between minor and major versions
+* Not reliable
 ```yaml
 steps:
   - uses: actions/javascript-action@v1.0.1
 ```
+
+#### Using SHAs
+* The most reliable
+* Not automatically updated
+* Must full length sha
+```yaml
+steps:
+  - uses: actions/javascript-action@172239021f7ba04fe7327647b213799853a9eb89
+```
+
+#### Using branches
+* Always updated to the HEAD of the branch
+* Not reliable
+```yaml
+steps:
+  - uses: actions/javascript-action@main
+```
+
 
 ## References
 * [Learn GitHub Actions](https://docs.github.com/en/actions/learn-github-actions)
