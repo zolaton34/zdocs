@@ -106,6 +106,14 @@ In you workflow editor
 * Navigate to the action you want to use in your workflow.
 * Under "Installation", copy the workflow syntax.
 
+### Using release management for your custom actions [docs](https://docs.github.com/en/actions/learn-github-actions/finding-and-customizing-actions#using-release-management-for-your-custom-actions)
+Community action have the option to use tags, branches, or SHA values to manage releases.
+#### Using tags
+````yaml
+steps:
+  - uses: actions/javascript-action@v1.0.1
+```
+
 ## References
 * [Learn GitHub Actions](https://docs.github.com/en/actions/learn-github-actions)
 * [GitHub Community Support's GitHub Actions category](https://github.community/c/code-to-cloud/github-actions/41)
