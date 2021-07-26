@@ -52,3 +52,8 @@ Used to build, test, package, release, or deploy a project on GitHub.
 * hosted by GitHub, or
 * custom hosted your own
 * listens for available jobs, runs one job at a time, and reports the progress, logs, and results back to GitHub
+### Create an example workflow
+* uses YAML syntax
+* stored in a directory called .github/workflows
+  * in the code repository
+  * special constraint: workspace_dispatch (manually) triggered must be stored in the default branch
