@@ -82,6 +82,14 @@ jobs:
       - run: npm install -g bats
       - run: bats -v
 ```
+## Finding and customizing actions
+### Overview
+Action can be defined in:
+* A public repository
+* The same repository where it is used
+* A published Docker container image on Docker Hub
+* [GitHub Marketplace](https://github.com/marketplace?type=actions)
+
 
 ## References
 * [Learn GitHub Actions](https://docs.github.com/en/actions/learn-github-actions)
