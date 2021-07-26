@@ -82,3 +82,7 @@ jobs:
       - run: npm install -g bats
       - run: bats -v
 ```
+
+## References
+* [Learn GitHub Actions](https://docs.github.com/en/actions/learn-github-actions)
+* [GitHub Community Support's GitHub Actions category](https://github.community/c/code-to-cloud/github-actions/41)
