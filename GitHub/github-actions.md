@@ -28,6 +28,7 @@
 Used to build, test, package, release, or deploy a project on GitHub.
 #### Events
 * specific activity that triggers a workflow
+* can be set to include or exclude branches, tags or paths
 * examples
   * push event
   * pull request event
@@ -59,9 +60,12 @@ Used to build, test, package, release, or deploy a project on GitHub.
   * special constraint: workspace_dispatch (manually) triggered must be stored in the default branch
 ```yaml
 # Optional - The name of the workflow as it will appear in the Actions tab of the GitHub repository.
-name: learn-github-actions 
+name: learn-github-actions
+# Triggering event
 on: [push]
+# groups all the jobs in the workflow
 jobs:
+  # check-bats-version job
   check-bats-version:
     runs-on: ubuntu-latest
     steps:
