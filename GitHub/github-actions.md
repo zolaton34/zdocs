@@ -109,7 +109,7 @@ In you workflow editor
 ### Using release management for your custom actions [docs](https://docs.github.com/en/actions/learn-github-actions/finding-and-customizing-actions#using-release-management-for-your-custom-actions)
 Community action have the option to use tags, branches, or SHA values to manage releases.
 #### Using tags
-````yaml
+```yaml
 steps:
   - uses: actions/javascript-action@v1.0.1
 ```
