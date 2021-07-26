@@ -19,7 +19,7 @@ jobs:
           distribution: 'adopt' # See 'Supported distributions' for available options
           java-version: '11'
       #- run: java -cp java HelloWorld
-      - run: pwd
+      - run: javac *.java
       - run: ls -la
-      - run: java -version
+     
 
