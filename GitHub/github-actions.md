@@ -19,6 +19,7 @@
   * Runner 2
     * Run actions 2.x
     * Log results
+
 ### The components of GitHub Actions
 #### Workflows
 * Made up one or more jobs
@@ -26,33 +27,39 @@
   * scheduled, or
   * triggered by an event
 Used to build, test, package, release, or deploy a project on GitHub.
+
 #### Events
 * specific activity that triggers a workflow
 * can be set to include or exclude branches, tags or paths
 * examples
   * push event
   * pull request event
+
 #### Jobs
 * set of steps that execute on the same runner
 * by default multiple jobs run in parallel
 * but can be set to run sequentially (usufull if there is a dependency between jobs)
+
 #### Steps
 * individual task that run commands in a job
 * can be either
   * an action or
   * a shell command
 * each step in a job executes on the same runner and share the same data
+
 #### Actions
 * standalone commands
 * combined into steps to create a job
 * smallest building block of a workflow
 * can be custom made or created by the GitHub community
 * to use it, include it as a step in a workflow
+
 #### Runners
 * a server that has the GitHub Actions runner application installed
 * hosted by GitHub, or
 * custom hosted your own
 * listens for available jobs, runs one job at a time, and reports the progress, logs, and results back to GitHub
+
 ### Create an example workflow
 * uses YAML syntax
 * stored in a directory called .github/workflows
@@ -82,6 +89,7 @@ jobs:
       - run: npm install -g bats
       - run: bats -v
 ```
+
 ## Finding and customizing actions
 ### Overview
 Action can be defined in:
@@ -89,15 +97,19 @@ Action can be defined in:
 * The same repository where it is used
 * A published Docker container image on Docker Hub
 * [GitHub Marketplace](https://github.com/marketplace?type=actions)
-# Browsing Marketplace actions in the workflow editor
+
+### Browsing Marketplace actions in the workflow editor
 You can [search and browse actions directly in your repository's](https://docs.github.com/en/actions/learn-github-actions/finding-and-customizing-actions#browsing-marketplace-actions-in-the-workflow-editor) workflow editor.
-# [Adding an action to your workflow](https://docs.github.com/en/actions/learn-github-actions/finding-and-customizing-actions#adding-an-action-to-your-workflow)
+
+### Adding an action to your workflow [see docs](https://docs.github.com/en/actions/learn-github-actions/finding-and-customizing-actions#adding-an-action-to-your-workflow)
 In you workflow editor 
 * Navigate to the action you want to use in your workflow.
 * Under "Installation", copy the workflow syntax.
+
 ## References
 * [Learn GitHub Actions](https://docs.github.com/en/actions/learn-github-actions)
 * [GitHub Community Support's GitHub Actions category](https://github.community/c/code-to-cloud/github-actions/41)
+
 ## TODO
 * [Workflow syntax for GitHub Actions](https://docs.github.com/en/actions/automating-your-workflow-with-github-actions/workflow-syntax-for-github-actions#jobsjob_idsteps)
 * [Using inputs and outputs with an action](https://docs.github.com/en/actions/learn-github-actions/finding-and-customizing-actions#using-inputs-and-outputs-with-an-action)
