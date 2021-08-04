@@ -22,11 +22,10 @@ jobs:
       #- run: ls -la
       #- run: java -cp . HelloWorld
       - run: echo 'My interaction 02'
-      #- uses: actions/checkout@v2
+      - uses: actions/checkout@v2
       - uses: zolaton34/zdocs@main
       #- uses: ./.github/actions/hello-world-action
       #- name: First interaction 01
-        #uses: actions/first-interaction@v1.1.0
         #with:
         #  # Token for the repository. Can be passed in using {{ secrets.GITHUB_TOKEN }}
         #  repo-token: ${{ secrets.GITHUB_TOKEN }}
