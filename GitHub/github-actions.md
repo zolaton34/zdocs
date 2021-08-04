@@ -153,6 +153,7 @@ steps:
 
 ### [Referencing a container on Docker Hub](https://docs.github.com/en/actions/learn-github-actions/finding-and-customizing-actions#referencing-a-container-on-docker-hub)
 * Referenced with `docker://{image}:{tag}`
+* Code example of [building a Docker image for use in an action and how to it](https://github.com/zolaton34/hello-world-docker-action#hello-world-docker-action).
 ##### Example
 ```yaml
 jobs:
@@ -161,6 +162,8 @@ jobs:
       - name: My first step
         uses: docker://alpine:3.8
 ```
+
+
 
 ## References
 * [Learn GitHub Actions](https://docs.github.com/en/actions/learn-github-actions)
