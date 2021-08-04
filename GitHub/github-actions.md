@@ -152,6 +152,15 @@ steps:
 ```
 
 ### [Referencing a container on Docker Hub](https://docs.github.com/en/actions/learn-github-actions/finding-and-customizing-actions#referencing-a-container-on-docker-hub)
+* Referenced with `docker://{image}:{tag}`
+##### Example
+```yaml
+jobs:
+  my_first_job:
+    steps:
+      - name: My first step
+        uses: docker://alpine:3.8
+```
 
 ## References
 * [Learn GitHub Actions](https://docs.github.com/en/actions/learn-github-actions)
