@@ -133,6 +133,7 @@ steps:
   - uses: actions/javascript-action@main
 ```
 
+### Using inputs and outputs with an action [docs](https://docs.github.com/en/actions/learn-github-actions/finding-and-customizing-actions#using-inputs-and-outputs-with-an-action)
 
 ## References
 * [Learn GitHub Actions](https://docs.github.com/en/actions/learn-github-actions)
