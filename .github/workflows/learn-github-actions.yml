@@ -25,6 +25,8 @@ jobs:
       - uses: actions/checkout@v2
       - uses: zolaton34/zdocs@main
         id: hello-nice-world
+        with:
+          who-to-greet: Toutou
       - run: echo "${{ steps.hello-nice-world.outputs.random-number }}"
       #- uses: ./.github/actions/hello-world-action
       #- name: First interaction 01
