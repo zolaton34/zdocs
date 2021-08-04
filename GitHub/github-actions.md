@@ -179,6 +179,17 @@ jobs:
             POSTGRES_PORT: 5432
 ```
 
+### [Adding scripts to your workflow](https://docs.github.com/en/actions/learn-github-actions/essential-features-of-github-actions#adding-scripts-to-your-workflow)
+Example:
+```yaml
+jobs:
+  example-job:
+    steps:
+      - name: Run build script
+        run: ./.github/scripts/build.sh
+        shell: bash
+```
+
 ## References
 * [Learn GitHub Actions](https://docs.github.com/en/actions/learn-github-actions)
 * [GitHub Community Support's GitHub Actions category](https://github.community/c/code-to-cloud/github-actions/41)
