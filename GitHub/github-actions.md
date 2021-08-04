@@ -136,7 +136,9 @@ steps:
 ### Using inputs and outputs with an action [docs](https://docs.github.com/en/actions/learn-github-actions/finding-and-customizing-actions#using-inputs-and-outputs-with-an-action)
 
 ### Referencing an action in the same repository where a workflow file uses the action [docs](https://docs.github.com/en/actions/learn-github-actions/finding-and-customizing-actions#referencing-an-action-in-the-same-repository-where-a-workflow-file-uses-the-action)
-* Can be referenced with `{owner}/{repo}@{ref}` or `./path/to/dir`
+* Can be referenced with
+  * `{owner}/{repo}@{ref}`. In that case the `action.yaml` file must be at the root of the referenced `{owner}/{repo}@{ref}`
+  * `./path/to/dir`. In that case we use the repository file structure shown below.
 #### Example repository file structure
 ```
 |-- hello-world (repository)
