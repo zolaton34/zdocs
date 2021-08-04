@@ -21,7 +21,8 @@ jobs:
       #- run: javac *.java
       #- run: ls -la
       #- run: java -cp . HelloWorld
-      - run: echo 'My interaction 01'
+      - run: echo 'My interaction 02'
+      - uses: actions/checkout@v2
       #- name: First interaction 01
         #uses: actions/first-interaction@v1.1.0
         #with:
