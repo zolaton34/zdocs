@@ -2,6 +2,11 @@ name: learn-github-actions
 on: 
   push:
   workflow_dispatch:
+    inputs:
+      who-to-greet:
+        #description: 'Log level'
+        required: true
+        #default: 'warning'
 jobs:
   first-job:
     runs-on: ubuntu-latest
@@ -28,7 +33,7 @@ jobs:
       - uses: zolaton34/zdocs@main
         id: hello-nice-world
         with:
-          who-to-greet: Toutou
+          who-to-greet: ${{ github.event.inputs.who-to-greet }}
       - run: echo "${{ steps.hello-nice-world.outputs.random-number }}"
       #- uses: ./.github/actions/hello-world-action
       #- name: First interaction 01
