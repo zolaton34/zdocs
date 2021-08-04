@@ -135,6 +135,19 @@ steps:
 
 ### Using inputs and outputs with an action [docs](https://docs.github.com/en/actions/learn-github-actions/finding-and-customizing-actions#using-inputs-and-outputs-with-an-action)
 
+### Referencing an action in the same repository where a workflow file uses the action [docs](https://docs.github.com/en/actions/learn-github-actions/finding-and-customizing-actions#referencing-an-action-in-the-same-repository-where-a-workflow-file-uses-the-action)
+* Can be referenced with `{owner}/{repo}@{ref}` or `./path/to/dir`
+#### Example repository file structure
+```
+|-- hello-world (repository)
+|   |__ .github
+|       |__ workflows
+|           |__ my-first-workflow.yml
+|       |__ actions
+|           |__ hello-world-action
+|               |__ action.yml
+```
+
 ## References
 * [Learn GitHub Actions](https://docs.github.com/en/actions/learn-github-actions)
 * [GitHub Community Support's GitHub Actions category](https://github.community/c/code-to-cloud/github-actions/41)
