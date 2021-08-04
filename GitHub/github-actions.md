@@ -134,7 +134,7 @@ steps:
 ```
 
 ### Using inputs and outputs with an action [docs](https://docs.github.com/en/actions/learn-github-actions/finding-and-customizing-actions#using-inputs-and-outputs-with-an-action)
-* TODO: How to use it?
+* TODO: Document with commented code example.
 
 ### Referencing an action in the same repository where a workflow file uses the action [docs](https://docs.github.com/en/actions/learn-github-actions/finding-and-customizing-actions#referencing-an-action-in-the-same-repository-where-a-workflow-file-uses-the-action)
 * Can be referenced with
