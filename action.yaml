@@ -19,5 +19,5 @@ runs:
       run: echo "::set-output name=random-id::$(echo $RANDOM)"
       shell: bash
     #- run: ${{ github.action_path }}/goodbye.sh
-    - run: env | rev | sort | grep modnar
-      shell: bash
+    #- run: env | rev | sort
+    #  shell: bash
