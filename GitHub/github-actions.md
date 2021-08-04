@@ -163,7 +163,21 @@ jobs:
         uses: docker://alpine:3.8
 ```
 
+## [Essential features of GitHub Actions](https://docs.github.com/en/actions/learn-github-actions/essential-features-of-github-actions)
 
+### [Using variables in your workflows](https://docs.github.com/en/actions/learn-github-actions/essential-features-of-github-actions#using-variables-in-your-workflows)
+* Actions include [default environment variables](https://docs.github.com/en/actions/reference/environment-variables#default-environment-variables)
+* We can also set custom environment variables like below
+```
+jobs:
+  example-job:
+      steps:
+        - name: Connect to PostgreSQL
+          run: node client.js
+          env:
+            POSTGRES_HOST: postgres
+            POSTGRES_PORT: 5432
+```
 
 ## References
 * [Learn GitHub Actions](https://docs.github.com/en/actions/learn-github-actions)
