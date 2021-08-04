@@ -106,7 +106,7 @@ In you workflow editor
 * Navigate to the action you want to use in your workflow.
 * Under "Installation", copy the workflow syntax.
 
-### Using release management for your custom actions [docs](https://docs.github.com/en/actions/learn-github-actions/finding-and-customizing-actions#using-release-management-for-your-custom-actions)
+### [Using release management for your custom actions](https://docs.github.com/en/actions/learn-github-actions/finding-and-customizing-actions#using-release-management-for-your-custom-actions)
 Community action have the option to use tags, branches, or SHA values to manage releases.
 #### Using tags
 * Can decide changes between minor and major versions
@@ -133,10 +133,10 @@ steps:
   - uses: actions/javascript-action@main
 ```
 
-### Using inputs and outputs with an action [docs](https://docs.github.com/en/actions/learn-github-actions/finding-and-customizing-actions#using-inputs-and-outputs-with-an-action)
+### [Using inputs and outputs with an action](https://docs.github.com/en/actions/learn-github-actions/finding-and-customizing-actions#using-inputs-and-outputs-with-an-action)
 * TODO: Document with commented code example.
 
-### Referencing an action in the same repository where a workflow file uses the action [docs](https://docs.github.com/en/actions/learn-github-actions/finding-and-customizing-actions#referencing-an-action-in-the-same-repository-where-a-workflow-file-uses-the-action)
+### [Referencing an action in the same repository where a workflow file uses the action](https://docs.github.com/en/actions/learn-github-actions/finding-and-customizing-actions#referencing-an-action-in-the-same-repository-where-a-workflow-file-uses-the-action)
 * Can be referenced with
   * `{owner}/{repo}@{ref}`. In that case the `action.yaml` file must be at the root of the referenced `{owner}/{repo}@{ref}`
   * `./path/to/dir`. In that case we use the repository file structure shown below.
@@ -150,6 +150,8 @@ steps:
 |           |__ hello-world-action
 |               |__ action.yml
 ```
+
+### [Referencing a container on Docker Hub](https://docs.github.com/en/actions/learn-github-actions/finding-and-customizing-actions#referencing-a-container-on-docker-hub)
 
 ## References
 * [Learn GitHub Actions](https://docs.github.com/en/actions/learn-github-actions)
