@@ -203,8 +203,17 @@ Example of [code source using sharing with artifacts](https://github.com/zolaton
 
 ## [Managing complex workflows](https://docs.github.com/en/actions/learn-github-actions/managing-complex-workflows)
 
+### [Storing secrets](https://docs.github.com/en/actions/learn-github-actions/managing-complex-workflows#storing-secrets)
+* Encryted secrets can be stored in
+  * an organization
+  * a repository
+  * a repository environment
+
+#### Naming your secrets
+See [Naming your secrets](https://docs.github.com/en/actions/reference/encrypted-secrets#naming-your-secrets)
 
 
+* Reference: [Encrypted secrets](https://docs.github.com/en/actions/reference/encrypted-secrets)
 
 ## References
 * [Learn GitHub Actions](https://docs.github.com/en/actions/learn-github-actions)
