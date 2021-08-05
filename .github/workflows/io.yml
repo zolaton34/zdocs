@@ -51,7 +51,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Call output action
+        id: random-number-generator
         uses: ./.github/actions/output-action 
-      #- name: Send greeting
-      #  run: echo "Hello ${{ github.event.inputs.name }}"
-      #  shell: bash
+      - name: Echoing output
+        run: echo Inside output action ${{ steps.random-number-generator.outputs.random-id }}.
+        shell: bash
