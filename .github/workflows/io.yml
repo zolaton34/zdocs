@@ -30,8 +30,6 @@ jobs:
   greet-input-action:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
       - name: Send greeting
         run: echo "Hello ${{ github.event.inputs.name }}"
         shell: bash
@@ -47,3 +45,11 @@ jobs:
         uses: zolaton34/zdocs@input-action
         with:
           who-to-greet: "${{ github.event.inputs.who-to-greet }}"
+  output-action:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call output action
+        uses: ./.github/actions/output-action 
+      #- name: Send greeting
+      #  run: echo "Hello ${{ github.event.inputs.name }}"
+      #  shell: bash
