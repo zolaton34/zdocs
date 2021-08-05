@@ -4,7 +4,7 @@ inputs:
   who-to-greet:
     description: "The name of the person to greet. To test input in actions."
     required: true
-    default: 'Tika Rol \\(default\\)'
+    default: 'Tika Rol : default'
 #outputs:
 #  results-file: # id of output
 #    description: "Path to results file"
