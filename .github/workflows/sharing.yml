@@ -6,20 +6,24 @@ jobs:
   uploading:
     runs-on: ubuntu-latest
     steps:
-      - shell: bash
-        run: |
-          expr 1 + 1 + 1 > output.log
+      - run: mkdir dist
+      - run: echo one > dist/one.txt
+      - run: echo two > dist/two.txt
+      - run: echo ls > dist/do-ls.sh
+      - run: echo README > dist/README.md
       - name: Upload output file
         uses: actions/upload-artifact@v2
         with:
-          name: output-log-file
-          path: output.log
-  dowloading:
-    runs-on: ubuntu-latest
-    needs: uploading
-    steps:
-      - name: Download a single artifact
-        uses: actions/download-artifact@v2
-        with:
-          name: output-log-file
-      - run: cat output.log
+          name: distro
+          path: |
+            dist
+            ! dist/**/*.md
+  #dowloading:
+  #  runs-on: ubuntu-latest
+  #  needs: uploading
+  #  steps:
+  #    - name: Download a single artifact
+  #      uses: actions/download-artifact@v2
+  #      with:
+  #        name: output-log-file
+  #    - run: cat output.log
