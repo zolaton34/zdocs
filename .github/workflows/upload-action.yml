@@ -13,3 +13,5 @@ jobs:
         with:
           name: output-log-file
           path: output.log
+      - run: ls -la
+        shell: bash
