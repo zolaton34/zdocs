@@ -54,5 +54,5 @@ jobs:
         id: random-number-generator
         uses: ./.github/actions/output-action 
       - name: Echoing output
-        run: echo Inside output action ${{ steps.random-number-generator.outputs.random-id }}.
+        run: echo Outside output action ${{ steps.random-number-generator.outputs.random-number }}.
         shell: bash
