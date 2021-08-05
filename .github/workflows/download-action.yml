@@ -1,0 +1,9 @@
+name: download-action
+on: push
+jobs:
+  upload-job:
+    name: Load output
+    runs-on: ubuntu-latest
+    steps:
+      - run: ls -la
+        shell: bash
