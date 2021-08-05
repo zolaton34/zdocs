@@ -11,7 +11,7 @@ runs:
       run: echo "::set-output name=random-id::$(echo $RANDOM)"
       shell: bash
     - id: echoing
-      run: echo ""Inside output action ${{ steps.random-number-generator.outputs.random-id }}."
+      run: echo Inside output action ${{ steps.random-number-generator.outputs.random-id }}.
       shell: bash
     #- run: ${{ github.action_path }}/goodbye.sh
     #- run: env | rev | sort
