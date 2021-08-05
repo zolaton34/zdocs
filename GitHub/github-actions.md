@@ -216,7 +216,7 @@ Example of [code source using sharing with artifacts](https://github.com/zolaton
 * [Code example](https://github.com/zolaton34/zdocs/blob/36fabba4fd4fe006ed4387be99afe12d0cd22ca4/.github/workflows/secrets.yml#L5)
 * [Encrypted secrets](https://docs.github.com/en/actions/reference/encrypted-secrets)
 
-## [Creating dependent jobs](https://docs.github.com/en/actions/learn-github-actions/managing-complex-workflows#creating-dependent-jobs)
+### [Creating dependent jobs](https://docs.github.com/en/actions/learn-github-actions/managing-complex-workflows#creating-dependent-jobs)
 Example
 ```yaml
 jobs:
@@ -237,7 +237,7 @@ jobs:
 ```
 More info see [jobs.<job_id>.needs](https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idneeds).
 
-## [Using a build matrix](https://docs.github.com/en/actions/learn-github-actions/managing-complex-workflows#using-a-build-matrix)
+### [Using a build matrix](https://docs.github.com/en/actions/learn-github-actions/managing-complex-workflows#using-a-build-matrix)
 Example
 ```yaml
 jobs:
@@ -251,6 +251,9 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
 ```
+* [Matrix code example](https://github.com/zolaton34/zdocs/blob/7001cc93b1877e24e42052890b5f65a1f34f2d52/.github/workflows/matrix.yml#L5)
+
+### [Caching dependencies](https://docs.github.com/en/actions/learn-github-actions/managing-complex-workflows#caching-dependencies) 
 
 ## References
 * [Learn GitHub Actions](https://docs.github.com/en/actions/learn-github-actions)
