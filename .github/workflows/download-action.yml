@@ -5,5 +5,9 @@ jobs:
     name: Load output
     runs-on: ubuntu-latest
     steps:
+      - name: Download a single artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: output-log-file
       - run: ls -la
         shell: bash
