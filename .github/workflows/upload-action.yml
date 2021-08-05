@@ -5,13 +5,22 @@ jobs:
     name: Save output
     runs-on: ubuntu-latest
     steps:
+      - run: expr 1 + 1 > output.log
       - shell: bash
-        run: |
-          expr 1 + 1 > output.log
       - name: Upload output file
         uses: actions/upload-artifact@v2
         with:
           name: output-log-file
           path: output.log
+      - run: ls -la
+        shell: bash
+  download-job:
+    name: load output
+    runs-on: ubuntu-latest
+    steps:
+      #- name: download a single artifact
+      #  uses: actions/download-artifact@v2
+      #  with:
+      #    name: output-log-file
       - run: ls -la
         shell: bash
