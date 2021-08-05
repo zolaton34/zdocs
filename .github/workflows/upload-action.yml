@@ -14,13 +14,13 @@ jobs:
           path: output.log
       - run: ls -la
         shell: bash
-  #download-job:
-  #  name: load output
-  #  runs-on: ubuntu-latest
-  #  steps:
-  #    #- name: download a single artifact
-  #    #  uses: actions/download-artifact@v2
-  #    #  with:
-  #    #    name: output-log-file
-  #    - run: ls -la
-  #      shell: bash
+  download-job:
+    name: Load output
+    runs-on: ubuntu-latest
+    steps:
+      #- name: download a single artifact
+      #  uses: actions/download-artifact@v2
+      #  with:
+      #    name: output-log-file
+      - run: ls -la
+        shell: bash
