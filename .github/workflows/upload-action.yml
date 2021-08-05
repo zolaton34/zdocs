@@ -1,12 +1,12 @@
 name: upload-action
-on: push
+on: [ push ]
 jobs:
   upload-job:
     name: Save output
     runs-on: ubuntu-latest
     steps:
       - run: expr 1 + 1 > output.log
-      - shell: bash
+        shell: bash
       - name: Upload output file
         uses: actions/upload-artifact@v2
         with:
