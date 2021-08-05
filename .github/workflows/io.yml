@@ -23,7 +23,7 @@ jobs:
         uses: ./.github/actions/input-action 
         with:
           who-to-greet: 'Milo Mita'
-      #- name: Call input action with input params from UI
-      #  uses: ./.github/actions/input-action 
-      #  with:
-      #    who-to-greet: "${{ inputs.who-to-greet }}"
+      - name: Call input action with input params from UI
+        uses: ./.github/actions/input-action 
+        with:
+          who-to-greet: "${{ github.events.inputs.who-to-greet }}"
