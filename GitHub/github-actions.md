@@ -237,6 +237,21 @@ jobs:
 ```
 More info see [jobs.<job_id>.needs](https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idneeds).
 
+## [Using a build matrix](https://docs.github.com/en/actions/learn-github-actions/managing-complex-workflows#using-a-build-matrix)
+Example
+```yaml
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [6, 8, 10]
+    steps:
+      - uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node }}
+```
+
 ## References
 * [Learn GitHub Actions](https://docs.github.com/en/actions/learn-github-actions)
 * [GitHub Community Support's GitHub Actions category](https://github.community/c/code-to-cloud/github-actions/41)
