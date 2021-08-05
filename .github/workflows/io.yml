@@ -1,5 +1,6 @@
 name: IO Workflow
 on:
+  push:
   workflow_dispatch:
     inputs:
       who-to-greet:
