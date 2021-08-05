@@ -1,23 +1,41 @@
-name: 'Hello World'
-description: 'Greet someone'
+name: "Action with inputs"
+description: "Example of an input"
 inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
+  who-to-greet:
+    description: "The name of the person to greet. To test input in actions."
     required: true
-    default: 'World'
-outputs:
-  random-number:
-    description: "Random number"
-    value: ${{ steps.random-number-generator.outputs.random-id }}
+    default: 'Tika Rol : default'
+#outputs:
+#  results-file: # id of output
+#    description: "Path to results file"
 runs:
   using: "composite"
   steps:
-    - id: echoing-hello
-      run: echo Hello ${{ inputs.who-to-greet }}.
+    - run: echo Hello ${{ inputs.who-to-greet }}.
       shell: bash
-    - id: random-number-generator
-      run: echo "::set-output name=random-id::$(echo $RANDOM)"
-      shell: bash
-    #- run: ${{ github.action_path }}/goodbye.sh
-    #- run: env | rev | sort
-    #  shell: bash
+
+
+
+#name: 'Hello World'
+#description: 'Greet someone'
+#inputs:
+#  who-to-greet:  # id of input
+#    description: 'Who to greet'
+#    required: true
+#    default: 'World'
+#outputs:
+#  random-number:
+#    description: "Random number"
+#    value: ${{ steps.random-number-generator.outputs.random-id }}
+#runs:
+#  using: "composite"
+#  steps:
+#    - id: echoing-hello
+#      run: echo Hello ${{ inputs.who-to-greet }}.
+#      shell: bash
+#    - id: random-number-generator
+#      run: echo "::set-output name=random-id::$(echo $RANDOM)"
+#      shell: bash
+#    #- run: ${{ github.action_path }}/goodbye.sh
+#    #- run: env | rev | sort
+#    #  shell: bash

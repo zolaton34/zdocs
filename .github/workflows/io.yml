@@ -7,7 +7,7 @@ on:
         default: 'World'
         required: true
 jobs:
-  greet:
+  greet-self:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -25,5 +25,25 @@ jobs:
           who-to-greet: 'Milo Mita'
       - name: Call input action with input params from UI
         uses: ./.github/actions/input-action 
+        with:
+          who-to-greet: "${{ github.event.inputs.who-to-greet }}"
+  greet-main:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Send greeting
+        run: echo "Hello ${{ github.event.inputs.name }}"
+        shell: bash
+      - run: pwd
+      - run: ls -la
+      - name: Call input action without input params
+        uses: zolaton34/zdocs@main
+      - name: Call input action with hardcoded input params
+        uses: zolaton34/zdocs@main 
+        with:
+          who-to-greet: 'Milo Mita'
+      - name: Call input action with input params from UI
+        uses: zolaton34/zdocs@main 
         with:
           who-to-greet: "${{ github.event.inputs.who-to-greet }}"
