@@ -134,7 +134,8 @@ steps:
 ```
 
 ### [Using inputs and outputs with an action](https://docs.github.com/en/actions/learn-github-actions/finding-and-customizing-actions#using-inputs-and-outputs-with-an-action)
-* TODO: Document with commented code example.
+* Example of [input source code](https://github.com/zolaton34/zdocs/blob/25b1b1fb31bfb9a787d6c78715b2dff488d1fd0a/.github/workflows/io.yml#L11)
+* Example of [output source code](https://github.com/zolaton34/zdocs/blob/25b1b1fb31bfb9a787d6c78715b2dff488d1fd0a/.github/workflows/io.yml#L48)
 
 ### [Referencing an action in the same repository where a workflow file uses the action](https://docs.github.com/en/actions/learn-github-actions/finding-and-customizing-actions#referencing-an-action-in-the-same-repository-where-a-workflow-file-uses-the-action)
 * Can be referenced with
