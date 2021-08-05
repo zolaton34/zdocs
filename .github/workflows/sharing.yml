@@ -2,17 +2,23 @@ name: Sharing Workflow
 on:
   #push:
   workflow_dispatch:
-    #inputs:
-    #  who-to-greet:
-    #    description: 'Person to greet'
-    #    default: 'World'
-    #    required: true
 jobs:
-  sharing:
+  uploading:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Echoing sharing
-        run: echo "Running sharing"
-        shell: bash
+      - shell: bash
+        run: |
+          expr 1 + 1 > output.log
+      - name: Upload output file
+        uses: actions/upload-artifact@v2
+        with:
+          name: output-log-file
+          path: output.log
+  dowloading:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download a single artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: output-log-file
+      - run: cat output.log

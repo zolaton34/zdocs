@@ -192,7 +192,11 @@ jobs:
 ```
 
 ### [Sharing data between jobs](https://docs.github.com/en/actions/learn-github-actions/essential-features-of-github-actions#sharing-data-between-jobs)
+Artifacts are used
+* to share files between jobs in the same workflow
+* store these files in GitHub. They will be accessible for the UI (in the action) and with the REST API
 
+Example of [code source using sharing with artifacts]()
 
 ## References
 * [Learn GitHub Actions](https://docs.github.com/en/actions/learn-github-actions)
