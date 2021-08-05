@@ -1,0 +1,16 @@
+name: "Action with inputs"
+description: "Example of an input"
+inputs:
+  who-to-greet: # id of input
+    description: "The name of the person to greet. To test input in actions."
+    required: true
+    default: "Tika Rol"
+#outputs:
+#  results-file: # id of output
+#    description: "Path to results file"
+runs:
+  using: "composite"
+  steps:
+    - run: echo Hello ${{ inputs.who-to-greet }}.
+      shell: bash
+
