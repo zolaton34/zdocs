@@ -26,4 +26,4 @@ jobs:
       - name: Call input action with input params from UI
         uses: ./.github/actions/input-action 
         with:
-          who-to-greet: "${{ github.events.inputs.who-to-greet }}"
+          who-to-greet: "${{ github.event.inputs.who-to-greet }}"
