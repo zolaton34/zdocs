@@ -22,4 +22,4 @@ jobs:
       - name: Call input action with hardcoded input params
         uses: ./.github/actions/input-action 
         with:
-          who-to-greet: 'Milo Mita'
+          who-to-greet: 'Milo Mita (with parens)'
