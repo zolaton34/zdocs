@@ -14,9 +14,9 @@ jobs:
         with:
           name: output-log-file
           path: output.log
-  dowloading:
-    runs-on: ubuntu-latest
-    steps:
+  #dowloading:
+  #  runs-on: ubuntu-latest
+  #  steps:
       - name: Download a single artifact
         uses: actions/download-artifact@v2
         with:
