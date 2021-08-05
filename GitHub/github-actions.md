@@ -196,7 +196,7 @@ Artifacts are used
 * to share files between jobs in the same workflow
 * store these files in GitHub. They will be accessible for the UI (in the action) and with the REST API
 
-Example of [code source using sharing with artifacts]()
+Example of [code source using sharing with artifacts](https://github.com/zolaton34/zdocs/blob/515e0887c62b3f80ab92552fd6e65e896391379b/.github/workflows/sharing.yml#L6)
 
 ## References
 * [Learn GitHub Actions](https://docs.github.com/en/actions/learn-github-actions)
