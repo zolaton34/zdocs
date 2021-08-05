@@ -38,12 +38,12 @@ jobs:
       - run: pwd
       - run: ls -la
       - name: Call input action without input params
-        uses: zolaton34/zdocs@main
+        uses: zolaton34/zdocs@input-main
       - name: Call input action with hardcoded input params
-        uses: zolaton34/zdocs@main 
+        uses: zolaton34/zdocs@input-main
         with:
           who-to-greet: 'Milo Mita'
       - name: Call input action with input params from UI
-        uses: zolaton34/zdocs@main 
+        uses: zolaton34/zdocs@input-main
         with:
           who-to-greet: "${{ github.event.inputs.who-to-greet }}"
