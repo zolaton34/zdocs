@@ -27,7 +27,7 @@ jobs:
         uses: ./.github/actions/input-action 
         with:
           who-to-greet: "${{ github.event.inputs.who-to-greet }}"
-  greet-main:
+  greet-input-action:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
