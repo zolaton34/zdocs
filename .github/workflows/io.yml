@@ -48,6 +48,8 @@ jobs:
   output-action:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2
       - name: Call output action
         uses: ./.github/actions/output-action 
       #- name: Send greeting
