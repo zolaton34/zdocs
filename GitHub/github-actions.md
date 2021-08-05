@@ -210,10 +210,11 @@ Example of [code source using sharing with artifacts](https://github.com/zolaton
   * a repository environment
 
 #### Naming your secrets
-See [Naming your secrets](https://docs.github.com/en/actions/reference/encrypted-secrets#naming-your-secrets)
+* See [Naming your secrets](https://docs.github.com/en/actions/reference/encrypted-secrets#naming-your-secrets)
 
-
-* Reference: [Encrypted secrets](https://docs.github.com/en/actions/reference/encrypted-secrets)
+#### Reference
+* [Code example](https://github.com/zolaton34/zdocs/blob/36fabba4fd4fe006ed4387be99afe12d0cd22ca4/.github/workflows/secrets.yml#L5)
+* [Encrypted secrets](https://docs.github.com/en/actions/reference/encrypted-secrets)
 
 ## References
 * [Learn GitHub Actions](https://docs.github.com/en/actions/learn-github-actions)
