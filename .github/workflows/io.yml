@@ -18,4 +18,8 @@ jobs:
       - run: pwd
       - run: ls -la
       - name: Call input action without input params
-        uses: ./.github/actions/input-action # Do not override defaults in called action
+        uses: ./.github/actions/input-action 
+      - name: Call input action with hardcoded input params
+        uses: ./.github/actions/input-action 
+        with:
+          who-to-greet: 'Milo Mita'
