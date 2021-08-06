@@ -23,14 +23,14 @@ jobs:
       - name: Echoing cache hit
         run: echo Cache hit ${{ steps.cache.outputs.cache-hit }}
 
-      - name: List after cache action
-        run: ls -la
+      #- name: List after cache action
+      #  run: ls -la
 
-      - name: Create cachables
-        run: mkdir -p caches && echo one > caches/cache-key
+      #- name: Create cachables
+      #  run: mkdir -p caches && echo one > caches/cache-key
 
-      - name: List after cachables creation
-        run: ls -la
+      #- name: List after cachables creation
+      #  run: ls -la
 
 
 
