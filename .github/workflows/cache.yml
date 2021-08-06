@@ -27,6 +27,6 @@ jobs:
         run: cat cache-keys/cache-key
 
       - name: Optionally fill cache
-        run: [ ${{ steps.cache.outputs.cache-hit }} ] || echo cache miss
+        run: '[ ${{ steps.cache.outputs.cache-hit }} ] || echo cache miss'
 
 
