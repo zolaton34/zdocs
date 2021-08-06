@@ -21,7 +21,7 @@ jobs:
           #  ${{ runner.os }}-
 
       - name: Echoing cache hit
-        run: echo Cache hit "${{ steps.cache.outputs.cache-hit }}"
+        run: echo Cache hit ${{ steps.cache.outputs.cache-hit }}
 
       - name: Echoing cache-key content
         run: cat cache-keys/cache-key
