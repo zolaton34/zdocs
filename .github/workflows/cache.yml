@@ -8,6 +8,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Cache
+      id: cache
         uses: actions/cache@v2
         env:
           cache-name: kache
@@ -21,3 +22,6 @@ jobs:
 
       - name: Echoing key
         run: echo  ${{ runner.os }}-build-
+
+      - name: Echoing cache hit
+        run: Cache hit: ${{ steps.cache.outputs.cache-hit }
