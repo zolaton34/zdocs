@@ -34,9 +34,3 @@ jobs:
 
       - name: Echoing cache content after optionally filling it
         run: cat ~/.cache/last-cached-content || true
-
-        #Fri Aug  6 13:43:35 UTC 2021
-        #Fri Aug  6 13:50:07 UTC 2021
-        #Fri Aug  6 13:50:07 UTC 2021
-
-
