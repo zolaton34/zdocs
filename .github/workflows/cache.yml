@@ -21,10 +21,10 @@ jobs:
             ${{ runner.os }}-
 
       - name: Echoing cache hit
-        run: echo Cache hit ${{ steps.cache.outputs.cache-hit }} || true
+        run: echo Cache hit ${{ steps.cache.outputs.cache-hit }}
 
       - name: Echoing cache-key content
-        run: cat cache-keys/cache-key
+        run: cat cache-keys/cache-key || true
 
       - name: Echoing cache content before optionally filling it
         run: cat ~/.cache/last-cached-content || true
