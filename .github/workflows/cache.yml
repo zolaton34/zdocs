@@ -20,8 +20,17 @@ jobs:
           #  ${{ runner.os }}-build-
           #  ${{ runner.os }}-
 
-      - name: Echoing key
-        run: echo  ${{ runner.os }}-build-
-
       - name: Echoing cache hit
         run: echo Cache hit ${{ steps.cache.outputs.cache-hit }}
+
+      - name: List after cache action
+        run: ls -la
+
+      - name: Create cachables
+        run: mkdir -p caches && echo one > caches/cache-key
+
+      - name: List after cachables creation
+        run: ls -la
+
+
+
