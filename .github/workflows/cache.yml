@@ -26,7 +26,12 @@ jobs:
       - name: Echoing cache-key content
         run: cat cache-keys/cache-key
 
-      - name: Optionally fill cache
-        run: '[ ${{ steps.cache.outputs.cache-hit }} ] || echo cache miss'
+      - name: Echoing cache content before optionally filling it
+        run: cat cache/date > cache/last-cached-content
 
+      - name: Optionally fill cache
+        run: '[ ${{ steps.cache.outputs.cache-hit }} ] || date > cache/last-cached-content'
+
+      - name: Echoing cache content after optionally filling it
+        run: cat cache/date > cache/last-cached-content
 
