@@ -15,10 +15,10 @@ jobs:
         with:
           path: ~/.cache
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/cache-key') }}
-          #restore-keys: |
-          #  ${{ runner.os }}-build-${{ env.cache-name }}-
-          #  ${{ runner.os }}-build-
-          #  ${{ runner.os }}-
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
 
       - name: Echoing cache hit
         run: echo Cache hit ${{ steps.cache.outputs.cache-hit }}
