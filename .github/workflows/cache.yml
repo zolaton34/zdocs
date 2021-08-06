@@ -26,11 +26,11 @@ jobs:
       - name: Echoing cache-key content
         run: cat cache-keys/cache-key || true
 
-      - name: Echoing cache content before optionally filling it
-        run: cat ~/.cache/last-cached-content || true
+      - name: Listing and echoing cache content before optionally filling it
+        run: ls -la ­~ && cat ~/.cache/last-cached-content || true
 
       - name: Optionally fill cache
         run: '[ ${{ steps.cache.outputs.cache-hit }} ] || (mkdir -p ~/.cache && date > ~/.cache/last-cached-content)'
 
-      - name: Echoing cache content after optionally filling it
-        run: cat ~/.cache/last-cached-content || true
+      - name: Listing and echoing cache content after optionally filling it
+        run: ls -la ­~ && cat ~/.cache/last-cached-content || true
