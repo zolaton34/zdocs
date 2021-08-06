@@ -21,16 +21,12 @@ jobs:
           #  ${{ runner.os }}-
 
       - name: Echoing cache hit
-        run: echo Cache hit ${{ steps.cache.outputs.cache-hit }}
+        run: echo Cache hit "${{ steps.cache.outputs.cache-hit }}"
 
-      #- name: List after cache action
-      #  run: ls -la
+      - name: Echoing cache-key content
+        run: cat cache-keys/cache-key
 
-      #- name: Create cachables
-      #  run: mkdir -p caches && echo one > caches/cache-key
-
-      #- name: List after cachables creation
-      #  run: ls -la
-
+      - name: Optionally fill cache
+        run: [ ${{ steps.cache.outputs.cache-hit }} ] || echo cache miss
 
 
