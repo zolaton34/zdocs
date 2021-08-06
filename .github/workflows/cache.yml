@@ -24,4 +24,4 @@ jobs:
         run: echo  ${{ runner.os }}-build-
 
       - name: Echoing cache hit
-        run: echo Cache hit ${{ steps.cache.outputs.cache-hit }
+        run: echo Cache hit ${{ steps.cache.outputs.cache-hit }}
