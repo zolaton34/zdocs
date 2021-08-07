@@ -3,7 +3,7 @@ on:
   push:
   #workflow_dispatch:
 jobs:
-  build:
+  project:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -11,7 +11,7 @@ jobs:
         id: cache
         uses: actions/cache@v2
         env:
-          cache-name: kache
+          cache-name: new-cache
         with:
           path: ~/.cache
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/cache-key') }}
@@ -23,14 +23,9 @@ jobs:
       - name: Echoing cache hit
         run: echo Cache hit ${{ steps.cache.outputs.cache-hit }}
 
-      - name: Echoing cache-key content
-        run: cat cache-keys/cache-key || true
+      - run: ls -la ~/.cache
 
-      - name: Listing and echoing cache content before optionally filling it
-        run: ls -la ­~/ && cat ~/.cache/last-cached-content || true
+      - run: export DATE="$(date +'%Y-%m-%d_%H-%M-%S-%3N')-NO-HIT-PROJECT" && echo no hit && mkdir -p ~/.cache && echo $DATE > ~/.cache/$DATE   
+        if: steps.cache.outputs.cache-hit != 'true'
 
-      - name: Optionally fill cache
-        run: '[ ${{ steps.cache.outputs.cache-hit }} ] || (mkdir -p ~/.cache && date > ~/.cache/last-cached-content)'
-
-      - name: Listing and echoing cache content after optionally filling it
-        run: ls -la ­~/ && cat ~/.cache/last-cached-content || true
+      - run: export DATE="$(date +'%Y-%m-%d_%H-%M-%S-%3N')-ALWAYS-PROJECT" && echo always && mkdir -p ~/.cache && echo $DATE > ~/.cache/$DATE   

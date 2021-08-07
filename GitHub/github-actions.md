@@ -254,9 +254,20 @@ jobs:
 * [Matrix code example](https://github.com/zolaton34/zdocs/blob/7001cc93b1877e24e42052890b5f65a1f34f2d52/.github/workflows/matrix.yml#L5)
 
 ### [Caching dependencies](https://docs.github.com/en/actions/learn-github-actions/managing-complex-workflows#caching-dependencies)
-  * [Action cache](https://github.com/actions/cache#cache)
-  * [Caching dependencies to speed up workflows](https://docs.github.com/en/actions/guides/caching-dependencies-to-speed-up-workflows)
-  * [Code example](https://github.com/zolaton34/zdocs/blob/73a432567c920ac16da52a8bbd510cb0cd61962b/.github/workflows/cache.yml#L5)
+* When cache miss
+  * Lookup restore-keys for partial match and restore the most recent if found any
+  * At the end, saves the new cache content, which includes
+    * The restored cached content, if any
+    * Overrided by the new content in the cache path
+* When cache hit
+  * Restore cache content
+  * At the end, does not save any cache content
+
+#### Reference
+* [Action cache](https://github.com/actions/cache#cache)
+* [Caching dependencies to speed up workflows](https://docs.github.com/en/actions/guides/caching-dependencies-to-speed-up-workflows)
+* [Code example](https://github.com/zolaton34/zdocs/blob/73a432567c920ac16da52a8bbd510cb0cd61962b/.github/workflows/cache.yml#L5)
+
 
 ## References
 * [Learn GitHub Actions](https://docs.github.com/en/actions/learn-github-actions)
