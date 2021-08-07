@@ -3,7 +3,60 @@ on:
   push:
   #workflow_dispatch:
 jobs:
-  project:
+  os-level:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Cache
+        id: cache
+        uses: actions/cache@v2
+        with:
+          path: ~/.cache
+          key: ${{ runner.os }}-${{ hashFiles('**/os-key') }}
+          restore-keys: |
+            ${{ runner.os }}-
+
+      - name: Echoing cache hit
+        run: echo Cache hit ${{ steps.cache.outputs.cache-hit }}
+
+      - run: ls -la ~/.cache || true
+
+      - run: export DATE="$(date +'%Y-%m-%d_%H-%M-%S-%3N')-OS_LEVEL-MISS" && echo no hit && mkdir -p ~/.cache && echo $DATE > ~/.cache/$DATE   
+        if: steps.cache.outputs.cache-hit != 'true'
+
+      - run: export DATE="$(date +'%Y-%m-%d_%H-%M-%S-%3N')-OS_LEVEL-HIT" && echo no hit && mkdir -p ~/.cache && echo $DATE > ~/.cache/$DATE   
+        if: steps.cache.outputs.cache-hit == 'true'
+
+      - run: export DATE="$(date +'%Y-%m-%d_%H-%M-%S-%3N')-OS_LEVEL-ALWAYS" && echo always && mkdir -p ~/.cache && echo $DATE > ~/.cache/$DATE   
+
+  build-level:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Cache
+        id: cache
+        uses: actions/cache@v2
+        with:
+          path: ~/.cache
+          key: ${{ runner.os }}-build-${{ hashFiles('**/build-key') }}
+          restore-keys: |
+            ${{ runner.os }}-build
+            ${{ runner.os }}-
+
+      - name: Echoing cache hit
+        run: echo Cache hit ${{ steps.cache.outputs.cache-hit }}
+
+      - run: ls -la ~/.cache || true
+
+      - run: export DATE="$(date +'%Y-%m-%d_%H-%M-%S-%3N')-BUILD_LEVEL-MISS" && echo no hit && mkdir -p ~/.cache && echo $DATE > ~/.cache/$DATE   
+        if: steps.cache.outputs.cache-hit != 'true'
+
+      - run: export DATE="$(date +'%Y-%m-%d_%H-%M-%S-%3N')-BUILD_LEVEL-HIT" && echo no hit && mkdir -p ~/.cache && echo $DATE > ~/.cache/$DATE   
+        if: steps.cache.outputs.cache-hit == 'true'
+
+      - run: export DATE="$(date +'%Y-%m-%d_%H-%M-%S-%3N')-BUILD_LEVEL-ALWAYS" && echo always && mkdir -p ~/.cache && echo $DATE > ~/.cache/$DATE   
+
+  env-level:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -14,7 +67,7 @@ jobs:
           cache-name: new-cache
         with:
           path: ~/.cache
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/cache-key') }}
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/env-key') }}
           restore-keys: |
             ${{ runner.os }}-build-${{ env.cache-name }}-
             ${{ runner.os }}-build-
@@ -23,9 +76,12 @@ jobs:
       - name: Echoing cache hit
         run: echo Cache hit ${{ steps.cache.outputs.cache-hit }}
 
-      - run: ls -la ~/.cache
+      - run: ls -la ~/.cache || true
 
-      - run: export DATE="$(date +'%Y-%m-%d_%H-%M-%S-%3N')-NO-HIT-PROJECT" && echo no hit && mkdir -p ~/.cache && echo $DATE > ~/.cache/$DATE   
+      - run: export DATE="$(date +'%Y-%m-%d_%H-%M-%S-%3N')-ENV_LEVEL-MISS" && echo no hit && mkdir -p ~/.cache && echo $DATE > ~/.cache/$DATE   
         if: steps.cache.outputs.cache-hit != 'true'
 
-      - run: export DATE="$(date +'%Y-%m-%d_%H-%M-%S-%3N')-ALWAYS-PROJECT" && echo always && mkdir -p ~/.cache && echo $DATE > ~/.cache/$DATE   
+      - run: export DATE="$(date +'%Y-%m-%d_%H-%M-%S-%3N')-ENV_LEVEL-HIT" && echo no hit && mkdir -p ~/.cache && echo $DATE > ~/.cache/$DATE   
+        if: steps.cache.outputs.cache-hit == 'true'
+
+      - run: export DATE="$(date +'%Y-%m-%d_%H-%M-%S-%3N')-ENV_LEVEL-ALWAYS" && echo always && mkdir -p ~/.cache && echo $DATE > ~/.cache/$DATE   
