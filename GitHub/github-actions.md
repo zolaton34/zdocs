@@ -212,7 +212,7 @@ Example of [code source using sharing with artifacts](https://github.com/zolaton
 #### Naming your secrets
 * See [Naming your secrets](https://docs.github.com/en/actions/reference/encrypted-secrets#naming-your-secrets)
 
-#### Reference
+#### Secret reference
 * [Code example](https://github.com/zolaton34/zdocs/blob/36fabba4fd4fe006ed4387be99afe12d0cd22ca4/.github/workflows/secrets.yml#L5)
 * [Encrypted secrets](https://docs.github.com/en/actions/reference/encrypted-secrets)
 
@@ -263,7 +263,7 @@ jobs:
   * Restore cache content
   * At the end, does not save any cache content
 
-#### Reference
+#### Cachin reference
 * [Action cache](https://github.com/actions/cache#cache)
 * [Caching dependencies to speed up workflows](https://docs.github.com/en/actions/guides/caching-dependencies-to-speed-up-workflows)
 * [Code example](https://github.com/zolaton34/zdocs/blob/73a432567c920ac16da52a8bbd510cb0cd61962b/.github/workflows/cache.yml#L5)
@@ -275,6 +275,9 @@ jobs:
 
 #### [Example 1 - Creating Redis service containers](https://docs.github.com/en/actions/guides/creating-redis-service-containers#testing-the-redis-service-container)
 * [Code source](https://github.com/zolaton34/zdocs/blob/b02ad1a60ab7a4653ca782d61fb4bd64a1e7335e/.github/workflows/redis-service-container.yml#L4)
+
+### Service reference
+* [About service containers](https://docs.github.com/en/actions/guides/about-service-containers)
 
 ### [Using labels to route workflows](https://docs.github.com/en/actions/learn-github-actions/managing-complex-workflows#using-labels-to-route-workflows)
 TODO
@@ -300,9 +303,6 @@ TODO
 
 #### [Using a workflow template](https://docs.github.com/en/actions/learn-github-actions/managing-complex-workflows#using-a-workflow-template)
 * See list [available templates](https://github.com/actions/starter-workflows)
-
-### Reference
-* [About service containers](https://docs.github.com/en/actions/guides/about-service-containers)
 
 ## References
 * [Learn GitHub Actions](https://docs.github.com/en/actions/learn-github-actions)
