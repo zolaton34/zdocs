@@ -1,7 +1,7 @@
 name: Caching
 on:
-  push:
-  #workflow_dispatch:
+  #push:
+  workflow_dispatch:
 jobs:
   os-level:
     runs-on: ubuntu-latest

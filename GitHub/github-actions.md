@@ -268,6 +268,17 @@ jobs:
 * [Caching dependencies to speed up workflows](https://docs.github.com/en/actions/guides/caching-dependencies-to-speed-up-workflows)
 * [Code example](https://github.com/zolaton34/zdocs/blob/73a432567c920ac16da52a8bbd510cb0cd61962b/.github/workflows/cache.yml#L5)
 
+### [Using databases and service containers](https://docs.github.com/en/actions/learn-github-actions/managing-complex-workflows#using-databases-and-service-containers)
+* For job that requires a database or cache service, use the `services` keyword.
+* It creates an container to host the service
+* Available until the job has completed.
+
+#### [Example 1 - Creating Redis service containers](https://docs.github.com/en/actions/guides/creating-redis-service-containers#testing-the-redis-service-container)
+* [Code source]()
+
+
+### Reference
+* [About service containers](https://docs.github.com/en/actions/guides/about-service-containers)
 
 ## References
 * [Learn GitHub Actions](https://docs.github.com/en/actions/learn-github-actions)
