@@ -298,6 +298,9 @@ TODO
 * Integer between 0 and 43,200 (30 days).
 ##### [Deployment branches](https://docs.github.com/en/actions/reference/environments#deployment-branches)
 
+#### [Using a workflow template](https://docs.github.com/en/actions/learn-github-actions/managing-complex-workflows#using-a-workflow-template)
+* See list [available templates](https://github.com/actions/starter-workflows)
+
 ### Reference
 * [About service containers](https://docs.github.com/en/actions/guides/about-service-containers)
 
