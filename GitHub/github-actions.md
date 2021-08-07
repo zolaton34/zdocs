@@ -274,8 +274,7 @@ jobs:
 * Available until the job has completed.
 
 #### [Example 1 - Creating Redis service containers](https://docs.github.com/en/actions/guides/creating-redis-service-containers#testing-the-redis-service-container)
-* [Code source]()
-
+* [Code source](https://github.com/zolaton34/zdocs/blob/b02ad1a60ab7a4653ca782d61fb4bd64a1e7335e/.github/workflows/redis-service-container.yml#L4)
 
 ### Reference
 * [About service containers](https://docs.github.com/en/actions/guides/about-service-containers)
