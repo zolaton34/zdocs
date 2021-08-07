@@ -1,6 +1,7 @@
 name: Redis container example
-on: push
-
+on:
+  #push:
+  workflow_dispatch:
 jobs:
   # Label of the container job
   container-job:
