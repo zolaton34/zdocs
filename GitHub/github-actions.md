@@ -295,6 +295,7 @@ TODO
 * If a job is not approved within 30 days, the workflow run will be automatically canceled
 * See also [Reviewing deployments](https://docs.github.com/en/actions/managing-workflow-runs/reviewing-deployments)
 ##### [Wait timer](https://docs.github.com/en/actions/reference/environments#wait-timer)
+* Integer between 0 and 43,200 (30 days).
 ##### [Deployment branches](https://docs.github.com/en/actions/reference/environments#deployment-branches)
 
 ### Reference
