@@ -276,6 +276,27 @@ jobs:
 #### [Example 1 - Creating Redis service containers](https://docs.github.com/en/actions/guides/creating-redis-service-containers#testing-the-redis-service-container)
 * [Code source](https://github.com/zolaton34/zdocs/blob/b02ad1a60ab7a4653ca782d61fb4bd64a1e7335e/.github/workflows/redis-service-container.yml#L4)
 
+### [Using labels to route workflows](https://docs.github.com/en/actions/learn-github-actions/managing-complex-workflows#using-labels-to-route-workflows)
+TODO
+
+### [Using environments](https://docs.github.com/en/actions/learn-github-actions/managing-complex-workflows#using-environments)
+* Environments define protection rules and secrets
+* Each job in a workflow can reference a single environment.
+* Any protection rules for the environment must pass 
+  * before the job referencing it is sent to a runner
+  * before the job can access its secrets
+* Only available for GitHub public repos or GitHub Enterprise repos
+
+#### [Environment protection rules](https://docs.github.com/en/actions/reference/environments#environment-protection-rules)
+##### [Required reviewers](https://docs.github.com/en/actions/reference/environments#required-reviewers).
+* Can list up to 6 reviewers or teams
+* Reviewers must have at least read access to the repo
+* Only one approval is required
+* If a job is not approved within 30 days, the workflow run will be automatically canceled
+* See also [Reviewing deployments](https://docs.github.com/en/actions/managing-workflow-runs/reviewing-deployments)
+##### [Wait timer](https://docs.github.com/en/actions/reference/environments#wait-timer)
+##### [Deployment branches](https://docs.github.com/en/actions/reference/environments#deployment-branches)
+
 ### Reference
 * [About service containers](https://docs.github.com/en/actions/guides/about-service-containers)
 
