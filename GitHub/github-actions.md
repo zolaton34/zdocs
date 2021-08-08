@@ -337,7 +337,7 @@ jobs:
 {
     "name": "Octo Organization Workflow",
     "description": "Octo Organization CI workflow template.",
-    "iconName": "example-icon",
+    "iconName": "workflow-icon",
     "categories": [
         "Go"
     ],
