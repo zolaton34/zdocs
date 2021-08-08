@@ -263,7 +263,7 @@ jobs:
   * Restore cache content
   * At the end, does not save any cache content
 
-#### Cachin reference
+#### Caching reference
 * [Action cache](https://github.com/actions/cache#cache)
 * [Caching dependencies to speed up workflows](https://docs.github.com/en/actions/guides/caching-dependencies-to-speed-up-workflows)
 * [Code example](https://github.com/Zolaton/zdocs/blob/73a432567c920ac16da52a8bbd510cb0cd61962b/.github/workflows/cache.yml#L5)
@@ -303,6 +303,52 @@ TODO
 
 #### [Using a workflow template](https://docs.github.com/en/actions/learn-github-actions/managing-complex-workflows#using-a-workflow-template)
 * See list [available templates](https://github.com/actions/starter-workflows)
+
+## [Sharing workflows with your organization](https://docs.github.com/en/actions/learn-github-actions/sharing-workflows-with-your-organization)
+
+## [Creating a workflow template](https://docs.github.com/en/actions/learn-github-actions/sharing-workflows-with-your-organization#creating-a-workflow-template)
+* Worflow templates are created in the .github repository of the organization
+* Can be used by organization members with permission to create workflows
+
+#### Procedure to create workflow template
+1. Create a public repository named `.github` in the organization
+1. Create a `workflow-templates` directory
+1. Create the workflow file inside the `workflow-templates` directory. Example [`octo-organization-ci.yml`](https://github.com/Zolaton/.github/blob/20f35e76f126351d79d2e12fe1f30ad3baada15a/workflow-templates/octo-organization-ci.yml#L1).
+```yaml
+name: Octo Organization CI
+on:
+  push:
+    branches: [ $default-branch ]
+  pull_request:
+    branches: [ $default-branch ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Run a one-line script
+        run: echo Hello from Octo Organization
+```
+1. Create a metadata file inside the `workflow-templates`. Example [`octo-organization-ci.properties.json`](https://github.com/Zolaton/.github/blob/20f35e76f126351d79d2e12fe1f30ad3baada15a/workflow-templates/octo-organization-ci.properties.json#L1).
+````json
+{
+    "name": "Octo Organization Workflow",
+    "description": "Octo Organization CI workflow template.",
+    "iconName": "example-icon",
+    "categories": [
+        "Go"
+    ],
+    "filePatterns": [
+        "package.json$",
+        "^Dockerfile",
+        ".*\\.md$"
+    ]
+}
+```
+
 
 
 
