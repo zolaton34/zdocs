@@ -314,40 +314,40 @@ TODO
 1. Create a public repository named `.github` in the organization
 1. Create a `workflow-templates` directory
 1. Create the workflow file inside the `workflow-templates` directory. Example [`octo-organization-ci.yml`](https://github.com/Zolaton/.github/blob/20f35e76f126351d79d2e12fe1f30ad3baada15a/workflow-templates/octo-organization-ci.yml#L1).
-```yaml
-name: Octo Organization CI
-on:
-  push:
-    branches: [ $default-branch ]
-  pull_request:
-    branches: [ $default-branch ]
+  ```yaml
+  name: Octo Organization CI
+  on:
+    push:
+      branches: [ $default-branch ]
+    pull_request:
+      branches: [ $default-branch ]
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
+  jobs:
+    build:
+      runs-on: ubuntu-latest
 
-    steps:
-      - uses: actions/checkout@v2
+      steps:
+        - uses: actions/checkout@v2
 
-      - name: Run a one-line script
-        run: echo Hello from Octo Organization
-```
+        - name: Run a one-line script
+          run: echo Hello from Octo Organization
+  ```
 1. Create a metadata file inside the `workflow-templates`. Example [`octo-organization-ci.properties.json`](https://github.com/Zolaton/.github/blob/20f35e76f126351d79d2e12fe1f30ad3baada15a/workflow-templates/octo-organization-ci.properties.json#L1).
-````json
-{
-    "name": "Octo Organization Workflow",
-    "description": "Octo Organization CI workflow template.",
-    "iconName": "workflow-icon",
-    "categories": [
-        "Go"
-    ],
-    "filePatterns": [
-        "package.json$",
-        "^Dockerfile",
-        ".*\\.md$"
-    ]
-}
-```
+  ```json
+  {
+      "name": "Octo Organization Workflow",
+      "description": "Octo Organization CI workflow template.",
+      "iconName": "workflow-icon",
+      "categories": [
+          "Go"
+      ],
+      "filePatterns": [
+          "package.json$",
+          "^Dockerfile",
+          ".*\\.md$"
+      ]
+  }
+  ```
 
 ### [Using a workflow template from your organization](https://docs.github.com/en/actions/learn-github-actions/sharing-workflows-with-your-organization#using-a-workflow-template-from-your-organization)
 
@@ -355,6 +355,9 @@ jobs:
 
 ### [Share self-hosted runners within an organization](https://docs.github.com/en/actions/learn-github-actions/sharing-workflows-with-your-organization#share-self-hosted-runners-within-an-organization)
 TODO
+
+## [Security hardening for GitHub Actions](https://docs.github.com/en/actions/learn-github-actions/security-hardening-for-github-actions)
+REPRISE
 
 ## References
 * [Learn GitHub Actions](https://docs.github.com/en/actions/learn-github-actions)
