@@ -134,8 +134,8 @@ steps:
 ```
 
 ### [Using inputs and outputs with an action](https://docs.github.com/en/actions/learn-github-actions/finding-and-customizing-actions#using-inputs-and-outputs-with-an-action)
-* Example of [input source code](https://github.com/zolaton34/zdocs/blob/25b1b1fb31bfb9a787d6c78715b2dff488d1fd0a/.github/workflows/io.yml#L11)
-* Example of [output source code](https://github.com/zolaton34/zdocs/blob/25b1b1fb31bfb9a787d6c78715b2dff488d1fd0a/.github/workflows/io.yml#L48)
+* Example of [input source code](https://github.com/Zolaton/zdocs/blob/25b1b1fb31bfb9a787d6c78715b2dff488d1fd0a/.github/workflows/io.yml#L11)
+* Example of [output source code](https://github.com/Zolaton/zdocs/blob/25b1b1fb31bfb9a787d6c78715b2dff488d1fd0a/.github/workflows/io.yml#L48)
 
 ### [Referencing an action in the same repository where a workflow file uses the action](https://docs.github.com/en/actions/learn-github-actions/finding-and-customizing-actions#referencing-an-action-in-the-same-repository-where-a-workflow-file-uses-the-action)
 * Can be referenced with
@@ -154,7 +154,7 @@ steps:
 
 ### [Referencing a container on Docker Hub](https://docs.github.com/en/actions/learn-github-actions/finding-and-customizing-actions#referencing-a-container-on-docker-hub)
 * Referenced with `docker://{image}:{tag}`
-* Code example of [building a Docker image for use in an action and how to it](https://github.com/zolaton34/hello-world-docker-action#hello-world-docker-action).
+* Code example of [building a Docker image for use in an action and how to it](https://github.com/Zolaton/hello-world-docker-action#hello-world-docker-action).
 ##### Example
 ```yaml
 jobs:
@@ -199,7 +199,7 @@ Artifacts are used
   * [With the GitHub CLI](https://docs.github.com/en/actions/managing-workflow-runs/downloading-workflow-artifacts)
   * [With the REST API](https://docs.github.com/en/rest/reference/actions#artifacts)
 
-Example of [code source using sharing with artifacts](https://github.com/zolaton34/zdocs/blob/515e0887c62b3f80ab92552fd6e65e896391379b/.github/workflows/sharing.yml#L6)
+Example of [code source using sharing with artifacts](https://github.com/Zolaton/zdocs/blob/515e0887c62b3f80ab92552fd6e65e896391379b/.github/workflows/sharing.yml#L6)
 
 ## [Managing complex workflows](https://docs.github.com/en/actions/learn-github-actions/managing-complex-workflows)
 
@@ -213,7 +213,7 @@ Example of [code source using sharing with artifacts](https://github.com/zolaton
 * See [Naming your secrets](https://docs.github.com/en/actions/reference/encrypted-secrets#naming-your-secrets)
 
 #### Secret reference
-* [Code example](https://github.com/zolaton34/zdocs/blob/36fabba4fd4fe006ed4387be99afe12d0cd22ca4/.github/workflows/secrets.yml#L5)
+* [Code example](https://github.com/Zolaton/zdocs/blob/36fabba4fd4fe006ed4387be99afe12d0cd22ca4/.github/workflows/secrets.yml#L5)
 * [Encrypted secrets](https://docs.github.com/en/actions/reference/encrypted-secrets)
 
 ### [Creating dependent jobs](https://docs.github.com/en/actions/learn-github-actions/managing-complex-workflows#creating-dependent-jobs)
@@ -251,7 +251,7 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
 ```
-* [Matrix code example](https://github.com/zolaton34/zdocs/blob/7001cc93b1877e24e42052890b5f65a1f34f2d52/.github/workflows/matrix.yml#L5)
+* [Matrix code example](https://github.com/Zolaton/zdocs/blob/7001cc93b1877e24e42052890b5f65a1f34f2d52/.github/workflows/matrix.yml#L5)
 
 ### [Caching dependencies](https://docs.github.com/en/actions/learn-github-actions/managing-complex-workflows#caching-dependencies)
 * When cache miss
@@ -266,7 +266,7 @@ jobs:
 #### Cachin reference
 * [Action cache](https://github.com/actions/cache#cache)
 * [Caching dependencies to speed up workflows](https://docs.github.com/en/actions/guides/caching-dependencies-to-speed-up-workflows)
-* [Code example](https://github.com/zolaton34/zdocs/blob/73a432567c920ac16da52a8bbd510cb0cd61962b/.github/workflows/cache.yml#L5)
+* [Code example](https://github.com/Zolaton/zdocs/blob/73a432567c920ac16da52a8bbd510cb0cd61962b/.github/workflows/cache.yml#L5)
 
 ### [Using databases and service containers](https://docs.github.com/en/actions/learn-github-actions/managing-complex-workflows#using-databases-and-service-containers)
 * For job that requires a database or cache service, use the `services` keyword.
@@ -274,7 +274,7 @@ jobs:
 * Available until the job has completed.
 
 #### [Example 1 - Creating Redis service containers](https://docs.github.com/en/actions/guides/creating-redis-service-containers#testing-the-redis-service-container)
-* [Code source](https://github.com/zolaton34/zdocs/blob/b02ad1a60ab7a4653ca782d61fb4bd64a1e7335e/.github/workflows/redis-service-container.yml#L4)
+* [Code source](https://github.com/Zolaton/zdocs/blob/b02ad1a60ab7a4653ca782d61fb4bd64a1e7335e/.github/workflows/redis-service-container.yml#L4)
 
 ### Service reference
 * [About service containers](https://docs.github.com/en/actions/guides/about-service-containers)
