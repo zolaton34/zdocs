@@ -306,7 +306,7 @@ TODO
 
 ## [Sharing workflows with your organization](https://docs.github.com/en/actions/learn-github-actions/sharing-workflows-with-your-organization)
 
-## [Creating a workflow template](https://docs.github.com/en/actions/learn-github-actions/sharing-workflows-with-your-organization#creating-a-workflow-template)
+### [Creating a workflow template](https://docs.github.com/en/actions/learn-github-actions/sharing-workflows-with-your-organization#creating-a-workflow-template)
 * Worflow templates are created in the .github repository of the organization
 * Can be used by organization members with permission to create workflows
 
@@ -349,8 +349,12 @@ jobs:
 }
 ```
 
+### [Using a workflow template from your organization](https://docs.github.com/en/actions/learn-github-actions/sharing-workflows-with-your-organization#using-a-workflow-template-from-your-organization)
 
+### [Sharing secrets within an organization](https://docs.github.com/en/actions/learn-github-actions/sharing-workflows-with-your-organization#sharing-secrets-within-an-organization)
 
+### [Share self-hosted runners within an organization](https://docs.github.com/en/actions/learn-github-actions/sharing-workflows-with-your-organization#share-self-hosted-runners-within-an-organization)
+TODO
 
 ## References
 * [Learn GitHub Actions](https://docs.github.com/en/actions/learn-github-actions)
