@@ -357,7 +357,19 @@ jobs:
 TODO
 
 ## [Security hardening for GitHub Actions](https://docs.github.com/en/actions/learn-github-actions/security-hardening-for-github-actions)
-REPRISE
+### [Using secrets](https://docs.github.com/en/actions/learn-github-actions/security-hardening-for-github-actions#using-secrets)
+* Never use structured data as a secret
+* Register all secrets used within workflows included sensitive information created by the workflow and secret transformed with the workflow (for example base64).
+* Audit how secrets are handled
+  * Review the source code of the repository executing the workflow
+  * Check any actions used in the workflow
+* View the run logs for your workflow after testing valid/invalid inputs
+* Use credentials with minimal scope
+* Restrict write access to your repository
+* Set `GITHUB_TOKEN` permission to `read-only`. [Increase its privileges](https://docs.github.com/en/actions/reference/authentication-in-a-workflow#modifying-the-permissions-for-the-github_token) only if strictly needed and a very restricted envinromnent / workflow
+* Audit and rotate registered secrets
+* Audit and rotate secrets
+* [Require reviewers](https://docs.github.com/en/actions/reference/environments#required-reviewers) to protect environment secrets
 
 ## References
 * [Learn GitHub Actions](https://docs.github.com/en/actions/learn-github-actions)
