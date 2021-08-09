@@ -1,8 +1,9 @@
-name: Caching
+name: Environment
+# IS THIS WORKFLOW USEFUL ?
 on:
-  push:
-    branches: [test-env] 
-  #workflow_dispatch:
+  #push:
+  #  branches: [test-env] 
+  workflow_dispatch:
 jobs:
   build:
     runs-on: ubuntu-latest
