@@ -371,6 +371,16 @@ TODO
 * Audit and rotate secrets
 * [Require reviewers](https://docs.github.com/en/actions/reference/environments#required-reviewers) to protect environment secrets
 
+### [Use CODEOWNERS to monitor changes](https://docs.github.com/en/actions/learn-github-actions/security-hardening-for-github-actions#using-codeowners-to-monitor-changes)
+For example `.github/workflow` to monitore changes in the workflows.
+
+### [Understanding the risk of script injections](https://docs.github.com/en/actions/learn-github-actions/security-hardening-for-github-actions#understanding-the-risk-of-script-injections)
+* Always consider your code might execute untrusted input from attackers
+* Attackers can add their own malicious content to the github context, which should be treated as potentially untrusted input
+
+#### [Example of a script injection attack]
+See [code source]()
+
 ## References
 * [Learn GitHub Actions](https://docs.github.com/en/actions/learn-github-actions)
 * [GitHub Community Support's GitHub Actions category](https://github.community/c/code-to-cloud/github-actions/41)
