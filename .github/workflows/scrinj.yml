@@ -7,7 +7,7 @@ jobs:
   inject-job:
     runs-on: ubuntu-latest
     steps:
-      - run: echo $GITHUB_WORKSPACE
+      - run: title=a; echo $GITHUB_WORKSPACE
       #- name: Check PR title
       #  run: |
       #    title="${{ github.event.pull_request.title }}"
