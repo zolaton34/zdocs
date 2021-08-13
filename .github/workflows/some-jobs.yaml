@@ -38,7 +38,7 @@ jobs:
       - run: echo integration 2-1 step 1
   test-2-1-1:
     runs-on: ubuntu-latest
-    needs:   integration-2-1, integration-1-1
+    needs:   [integration-2-1, integration-1-1]
     steps:
       - run: echo test-2-1-1 step 1
   integration-3-1:
