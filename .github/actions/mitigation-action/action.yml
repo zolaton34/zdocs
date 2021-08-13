@@ -9,4 +9,5 @@ runs:
   steps:
       - uses: actions/checkout@v2
       - run: YOUR_NAME="${{ inputs.your-name }}"
+        shell: bash
 
