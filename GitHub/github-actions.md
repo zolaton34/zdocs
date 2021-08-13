@@ -400,7 +400,7 @@ See [code source](https://github.com/Zolaton/zdocs/blob/8fc441aae86be41fd83a103d
       - name: Second mitigation
         env:
           YOUR_NAME: ${{ github.event.inputs.your-name }}
-        run: echo YOUR_NAME
+        run: echo $YOUR_NAME
 ```
 
 #### [Using CodeQL to analyze your code](https://docs.github.com/en/actions/learn-github-actions/security-hardening-for-github-actions#using-codeql-to-analyze-your-code)
@@ -408,6 +408,47 @@ See [code source](https://github.com/Zolaton/zdocs/blob/8fc441aae86be41fd83a103d
 
 #### [Restricting permissions for tokens](https://docs.github.com/en/actions/learn-github-actions/security-hardening-for-github-actions#restricting-permissions-for-tokens)
 * See also [Modifying the permissions for the GITHUB_TOKEN](https://docs.github.com/en/actions/learn-github-actions/security-hardening-for-github-actions#restricting-permissions-for-tokens)
+
+### [Using third-party actions](https://docs.github.com/en/actions/learn-github-actions/security-hardening-for-github-actions#using-third-party-actions)
+Mitigate risks of running third-party actions
+* Pin actions to a full length commit SHA
+  * Only way to use an immutable release of an action
+* Audit the source code of the action
+* Pin actions to a tag only if you trust the creator
+
+### [Potential impact of a compromised runner](https://docs.github.com/en/actions/learn-github-actions/security-hardening-for-github-actions#potential-impact-of-a-compromised-runner)
+* [Accessing secrets](https://docs.github.com/en/actions/learn-github-actions/security-hardening-for-github-actions#accessing-secrets)
+* [Exfiltrating data from a runner](https://docs.github.com/en/actions/learn-github-actions/security-hardening-for-github-actions#exfiltrating-data-from-a-runner)
+* [Stealing the job's `GITHUB_TOKEN`](https://docs.github.com/en/actions/learn-github-actions/security-hardening-for-github-actions#stealing-the-jobs-github_token)
+* [Modifying the contents of a repository](https://docs.github.com/en/actions/learn-github-actions/security-hardening-for-github-actions#modifying-the-contents-of-a-repository)
+Recommended approaches for accessing repository data within a workflow, in descending order of preference:
+1. The `GITHUB_TOKEN`
+2. Repository deploy key
+  * These are SSH keys stored at the repository level
+  * Can only be used for pull and (optionally) push git like commands
+3. Personal access tokens
+  * DO NOT USE IT
+4. SSH keys on a user account
+  * DO NOT USE IT
+
+### [Hardening for self-hosted runners](https://docs.github.com/en/actions/learn-github-actions/security-hardening-for-github-actions#hardening-for-self-hosted-runners)
+* Prefer _GitHub-hosted runners_ that are ephemeral virtual machine
+* _Self-hosted_ runners on GitHub can be persistently compromised by untrusted code in a workflow
+  * Should almost never be used for public repositories
+  * Be also cautious when using self-hosted runners on private repositories
+  * We ca reduce the scope of a compromise, by organizing self-hosted runners into separate groups
+  * Connsider also the environment of the self-hosted runner machines:
+    * Private SSH Keys, API tokens etc.
+    * The amount of sensitive information in this environment should be kept to a minimum
+
+### [Auditing GitHub Actions events](https://docs.github.com/en/actions/learn-github-actions/security-hardening-for-github-actions#auditing-github-actions-events)
+GitHub Actions events in the audit log
+* [Events for environments](https://docs.github.com/en/actions/learn-github-actions/security-hardening-for-github-actions#events-for-environments)
+* [Events for configuration changes](https://docs.github.com/en/actions/learn-github-actions/security-hardening-for-github-actions#events-for-configuration-changes)
+* [Events for secret management](https://docs.github.com/en/actions/learn-github-actions/security-hardening-for-github-actions#events-for-secret-management)
+* [Events for self-hosted runners](https://docs.github.com/en/actions/learn-github-actions/security-hardening-for-github-actions#events-for-self-hosted-runners)
+* [Events for self-hosted runner groups](https://docs.github.com/en/actions/learn-github-actions/security-hardening-for-github-actions#events-for-self-hosted-runner-groups)
+* [Events for workflow activities](https://docs.github.com/en/actions/learn-github-actions/security-hardening-for-github-actions#events-for-workflow-activities)
 
 ## References
 * [Learn GitHub Actions](https://docs.github.com/en/actions/learn-github-actions)
