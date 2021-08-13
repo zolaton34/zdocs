@@ -1,0 +1,12 @@
+name: "Mitigate Injection"
+inputs:
+  your-name:
+    description: "Your Name"
+    required: true
+    default: 'a"; ls $GITHUB_WORKSPACE"'
+runs:
+  using: "composite"
+  steps:
+      - uses: actions/checkout@v2
+      - run: YOUR_NAME="${{ inputs.your-name }}"
+

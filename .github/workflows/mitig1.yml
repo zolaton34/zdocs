@@ -1,4 +1,4 @@
-name: Inject Workflow
+name: Mitigation 1
 on:
   #push: 
   workflow_dispatch:
@@ -12,6 +12,6 @@ jobs:
   inject-job:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - run: YOUR_NAME="${{ github.event.inputs.your-name }}"
-      #- run: title="${{ github.event.pull_request.title }}"
+      - uses: ./.github/actions/mitigation-action
+        with:
+          your-name: ${{ github.event.inputs.your-name }}

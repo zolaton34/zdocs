@@ -379,7 +379,19 @@ For example `.github/workflow` to monitore changes in the workflows.
 * Attackers can add their own malicious content to the github context, which should be treated as potentially untrusted input
 
 #### [Example of a script injection attack](https://docs.github.com/en/actions/learn-github-actions/security-hardening-for-github-actions#understanding-the-risk-of-script-injections)
-See [code source]()
+See [code source](https://github.com/Zolaton/zdocs/blob/8fc441aae86be41fd83a103da9e278525e230c38/.github/workflows/scrinj.yml#L2)
+
+### [Good practices for mitigating script injection attacks](https://docs.github.com/en/actions/learn-github-actions/security-hardening-for-github-actions#good-practices-for-mitigating-script-injection-attacks)
+
+#### [Using an action instead of an inline script (recommended)](https://docs.github.com/en/actions/learn-github-actions/security-hardening-for-github-actions#using-an-action-instead-of-an-inline-script-recommended)
+* Create an action that processes the context value as an argument
+* Example action code:
+```yaml
+    steps:
+      - uses: ./.github/actions/mitigation-action
+        with:
+          your-name: ${{ github.event.inputs.your-name }}
+```
 
 ## References
 * [Learn GitHub Actions](https://docs.github.com/en/actions/learn-github-actions)
