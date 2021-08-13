@@ -3,7 +3,6 @@ inputs:
   your-name:
     description: "Your Name"
     required: true
-    default: 'a"; ls $GITHUB_WORKSPACE"'
 runs:
   using: "composite"
   steps:
