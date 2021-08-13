@@ -378,7 +378,7 @@ For example `.github/workflow` to monitore changes in the workflows.
 * Always consider your code might execute untrusted input from attackers
 * Attackers can add their own malicious content to the github context, which should be treated as potentially untrusted input
 
-#### [Example of a script injection attack]
+#### [Example of a script injection attack](https://docs.github.com/en/actions/learn-github-actions/security-hardening-for-github-actions#understanding-the-risk-of-script-injections)
 See [code source]()
 
 ## References
