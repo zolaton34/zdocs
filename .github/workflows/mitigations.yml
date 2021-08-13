@@ -1,4 +1,4 @@
-name: Mitigation 1
+name: Mitigations
 on:
   #push: 
   workflow_dispatch:
@@ -12,7 +12,14 @@ jobs:
   inject-job:
     runs-on: ubuntu-latest
     steps:
+      # Mitigation 1
       - uses: actions/checkout@v2
       - uses: ./.github/actions/mitigation-action
+        name: First mitigation
         with:
           your-name: ${{ github.event.inputs.your-name }}
+      # Mitigation 2
+      - name: Second mitigation
+        env:
+          YOUR_NAME: ${{ github.event.inputs.your-name }}
+        run: echo $YOUR_NAME

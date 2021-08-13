@@ -393,6 +393,15 @@ See [code source](https://github.com/Zolaton/zdocs/blob/8fc441aae86be41fd83a103d
         with:
           your-name: ${{ github.event.inputs.your-name }}
 ```
+#### [Using an intermediate environment variable](https://docs.github.com/en/actions/learn-github-actions/security-hardening-for-github-actions#using-an-intermediate-environment-variable)
+* Prefered for inline scripts
+* Example
+```yml
+      - name: Second mitigation
+        env:
+          YOUR_NAME: ${{ github.event.inputs.your-name }}
+        run: echo YOUR_NAME
+```
 
 ## References
 * [Learn GitHub Actions](https://docs.github.com/en/actions/learn-github-actions)
