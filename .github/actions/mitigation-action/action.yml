@@ -6,6 +6,6 @@ inputs:
 runs:
   using: "composite"
   steps:
-      - run: YOUR_NAME=${{ inputs.your-name }}
+      - run: YOUR_NAME=${{ inputs.your-name }} # Beware to not enclose the context input with single or double quotes
         shell: bash
 

@@ -403,6 +403,12 @@ See [code source](https://github.com/Zolaton/zdocs/blob/8fc441aae86be41fd83a103d
         run: echo YOUR_NAME
 ```
 
+#### [Using CodeQL to analyze your code](https://docs.github.com/en/actions/learn-github-actions/security-hardening-for-github-actions#using-codeql-to-analyze-your-code)
+* TODO =  better understanding
+
+#### [Restricting permissions for tokens](https://docs.github.com/en/actions/learn-github-actions/security-hardening-for-github-actions#restricting-permissions-for-tokens)
+* See also [Modifying the permissions for the GITHUB_TOKEN](https://docs.github.com/en/actions/learn-github-actions/security-hardening-for-github-actions#restricting-permissions-for-tokens)
+
 ## References
 * [Learn GitHub Actions](https://docs.github.com/en/actions/learn-github-actions)
 * [GitHub Community Support's GitHub Actions category](https://github.community/c/code-to-cloud/github-actions/41)
