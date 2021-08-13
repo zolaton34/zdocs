@@ -385,9 +385,10 @@ See [code source](https://github.com/Zolaton/zdocs/blob/8fc441aae86be41fd83a103d
 
 #### [Using an action instead of an inline script (recommended)](https://docs.github.com/en/actions/learn-github-actions/security-hardening-for-github-actions#using-an-action-instead-of-an-inline-script-recommended)
 * Create an action that processes the context value as an argument
-* Example action code:
+* Example [code](https://github.com/Zolaton/zdocs/blob/2488d85cdea5222bada940ecd81d8208a48e39ce/.github/workflows/mitig1.yml#L1):
 ```yaml
     steps:
+      - uses: actions/checkout@v2
       - uses: ./.github/actions/mitigation-action
         with:
           your-name: ${{ github.event.inputs.your-name }}
