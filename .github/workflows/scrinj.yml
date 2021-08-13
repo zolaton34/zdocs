@@ -13,4 +13,5 @@ jobs:
   inject-job:
     runs-on: ubuntu-latest
     steps:
-      - run: title="${{ github.event.pull_request.title }}"
+      - run: YOUR_NAME="${{ inputs.your_name }}"
+      #- run: title="${{ github.event.pull_request.title }}"
