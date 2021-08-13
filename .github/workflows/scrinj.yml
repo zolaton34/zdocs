@@ -3,6 +3,11 @@ name: Inject Workflow
 on:
   #push: 
   workflow_dispatch:
+    inputs:
+      your_name:
+        required: true
+        description: Your name
+        default: 'a"; echo $GITHUB_WORKSPACE"'
   #pull_request:
 jobs:
   inject-job:
