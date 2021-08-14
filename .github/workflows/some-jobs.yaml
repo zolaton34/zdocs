@@ -1,7 +1,7 @@
 name: Several Jobs
 on:
-  push: 
-  #workflow_dispatch:
+  #push:
+  workflow_dispatch:
 jobs:
   build-1:
     runs-on: ubuntu-latest
