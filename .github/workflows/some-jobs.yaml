@@ -48,7 +48,7 @@ jobs:
       - run: echo integration 3-1 step 1
   deploy:
     runs-on: ubuntu-latest
-    needs:   [ test-2-1-1, integration-1-2, integration-3-1 ]
+    needs:   [ test-2-1-1, integration-3-1 ]
     steps:
       - run: echo deploy step 1
       - run: echo deploy step 2
