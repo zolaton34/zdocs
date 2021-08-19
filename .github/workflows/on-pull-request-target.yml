@@ -10,3 +10,4 @@ jobs:
       - run: env | sort
       - run: ls -la
       - run: echo "THE_DOCS_SECRET $(echo ${{ secrets.THE_DOCS_SECRET }}) | rev "
+      - run: git log --decorate --all --graph --oneline -n 10
