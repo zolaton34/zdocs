@@ -1,0 +1,8 @@
+name: On Pull Request Target Workflow
+on:
+  pull_request_target:
+jobs:
+  on-pull-request-target-job:
+    runs-on: ubuntu-latest
+    steps:
+      - run: env | sort
