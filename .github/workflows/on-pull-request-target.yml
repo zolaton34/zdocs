@@ -1,6 +1,6 @@
 name: On Pull Request Target Workflow
 on:
-  pull_request_target:
+  #pull_request_target:
   workflow_dispatch:
 jobs:
   on-pull-request-target-job:
