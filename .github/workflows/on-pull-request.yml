@@ -2,7 +2,7 @@ name: On Pull Request Workflow
 on:
   pull_request:
 jobs:
-  simple-job:
+  on-pull-request-job:
     runs-on: ubuntu-latest
     steps:
       - run: env | sort
