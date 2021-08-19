@@ -38,9 +38,9 @@ jobs:
       - run: unzip pr.zip
       - run: ls -la
       - run: env | sort
-      - run: echo owner - "${{ context.repo.owner }}"
-      - run: echo repo - "${{ context.repo.repo }}"
-      - run: echo issue number - "${{ Number(fs.readFileSync('./NR')) }}"
+      - run: echo owner - "${{ github.repository }}"
+      - run: echo repo - "${{ github.repository_owner }}"
+      #- run: echo issue number - "${{ Number(fs.readFileSync('./NR')) }}"
 
       #- name: 'Comment on PR'
       #  uses: actions/github-script@v3
