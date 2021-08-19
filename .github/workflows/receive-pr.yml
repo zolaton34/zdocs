@@ -14,7 +14,7 @@ jobs:
 
       # imitation of a build process
       - name: Build
-        run: /bin/bash ./build.sh
+        run: echo Build my app
 
       - name: Save PR number
         run: |
