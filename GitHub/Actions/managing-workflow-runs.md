@@ -21,4 +21,7 @@ __Note: __ these debug logs are not visible in the UI but are included in the do
 * In the repository that contains the workflow set the `ACTIONS_STEP_DEBUG` to `true`
 __Note: __ these debug logs are not total visible in the UI but theses full logs are included in the download zip.
 ## [Adding a workflow status badge](https://docs.github.com/en/actions/managing-workflow-runs/adding-a-workflow-status-badge)
-Example: * [![Actions](https://github.com/Zolaton/zdocs/actions/workflows/simple-workflow.yml/badge.svg)](https://github.com/Zolaton/zdocs/actions)
+Examples: 
+* For the default branch: [![Actions Status](https://github.com/Zolaton/zdocs/actions/workflows/simple-workflow.yml/badge.svg)](https://github.com/Zolaton/zdocs/actions)
+* For a specific branch: [![Actions Status](https://github.com/Zolaton/zdocs/actions/workflows/simple-workflow.yml/badge.svg?branch=feature-1)](https://github.com/Zolaton/zdocs/actions)
+* For a specific event: [![Actions Status](https://github.com/Zolaton/zdocs/actions/workflows/simple-workflow.yml/badge.svg?event=pull_request)](https://github.com/Zolaton/zdocs/actions)
