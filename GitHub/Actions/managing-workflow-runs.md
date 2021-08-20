@@ -16,6 +16,8 @@ TOC:
 ## [Enabling debug logging](https://docs.github.com/en/actions/managing-workflow-runs/enabling-debug-logging)
 ### [Enabling runner diagnostic logging](https://docs.github.com/en/actions/managing-workflow-runs/enabling-debug-logging#enabling-runner-diagnostic-logging)
 * In the repository that contains the workflow set the `ACTIONS_RUNNER_DEBUG` to `true`
+__Note: __ these debug logs are not visible in the UI but are included in the download zip.
 ### [Enabling step debug logging](https://docs.github.com/en/actions/managing-workflow-runs/enabling-debug-logging#enabling-step-debug-logging)
 * In the repository that contains the workflow set the `ACTIONS_STEP_DEBUG` to `true`
+__Note: __ these debug logs are not visible in the UI but are included in the download zip.
 ## [Adding a workflow status badge](https://docs.github.com/en/actions/managing-workflow-runs/adding-a-workflow-status-badge)
