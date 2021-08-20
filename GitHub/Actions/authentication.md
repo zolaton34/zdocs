@@ -12,3 +12,18 @@
 
 ## [Permissions for the GITHUB_TOKEN](https://docs.github.com/en/actions/reference/authentication-in-a-workflow#permissions-for-the-github_token)
 * See [permissions table](https://docs.github.com/en/actions/reference/authentication-in-a-workflow#permissions-for-the-github_token)
+* Default access types
+  * Can be changed in the enterprise, organization or repository settings
+    * Permissive
+    * Restrictive
+  * For forked repositories maximum access is read
+### [Modifying the permissions for the `GITHUB_TOKEN`](https://docs.github.com/en/actions/reference/authentication-in-a-workflow#modifying-the-permissions-for-the-github_token)
+* Permissions can be changed in individual workflow files
+* When the `permissions` key is used, all unspecified permissions are set to no access, `metadata`, which is always read access
+* By default, write access cannot be added on forked repositories (except if it has the `Send write tokens to workflows from pull requests` setting)
+### [How the permissions are calculated for a workflow job](https://docs.github.com/en/actions/reference/authentication-in-a-workflow#how-the-permissions-are-calculated-for-a-workflow-job)
+* Gets the most restrictive default in its parents (repos, organization, enterprise)
+* Then apply settings in workflow file
+  * At the workflow level
+  * Then at the job level
+* If event is `pull_request` and `Send write tokens to workflows from pull requests` setting is not enable permmissions are set to read only
