@@ -27,3 +27,5 @@
   * At the workflow level
   * Then at the job level
 * If event is `pull_request` and `Send write tokens to workflows from pull requests` setting is not enable permmissions are set to read only
+### [Granting additional permissions](https://docs.github.com/en/actions/reference/authentication-in-a-workflow#granting-additional-permissions)
+If you need a token that requires permissions that aren't available in the `GITHUB_TOKEN`, you can create a personal access token and set it as a secret in your repository.
