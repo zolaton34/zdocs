@@ -9,3 +9,6 @@
 
 ## [Using the `GITHUB_TOKEN` in a workflow](https://docs.github.com/en/actions/reference/authentication-in-a-workflow#using-the-github_token-in-a-workflow)
 * Can be referenced with `${{ secrets.GITHUB_TOKEN }}`
+
+## [Permissions for the GITHUB_TOKEN](https://docs.github.com/en/actions/reference/authentication-in-a-workflow#permissions-for-the-github_token)
+* See [permissions table](https://docs.github.com/en/actions/reference/authentication-in-a-workflow#permissions-for-the-github_token)
