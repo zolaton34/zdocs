@@ -1,5 +1,9 @@
 name: Comment on the pull request
 
+permissions:
+  contents: read
+  issues: write
+
 # read-write repo token
 # access to secrets
 on:
