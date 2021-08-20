@@ -14,4 +14,8 @@ TOC:
 ## [Downloading workflow artifacts](https://docs.github.com/en/actions/managing-workflow-runs/downloading-workflow-artifacts)
 ## [Removing workflow artifacts](https://docs.github.com/en/actions/managing-workflow-runs/removing-workflow-artifacts)
 ## [Enabling debug logging](https://docs.github.com/en/actions/managing-workflow-runs/enabling-debug-logging)
+### [Enabling runner diagnostic logging](https://docs.github.com/en/actions/managing-workflow-runs/enabling-debug-logging#enabling-runner-diagnostic-logging)
+* In the repository that contains the workflow set the `ACTIONS_RUNNER_DEBUG` to `true`
+### [Enabling step debug logging](https://docs.github.com/en/actions/managing-workflow-runs/enabling-debug-logging#enabling-step-debug-logging)
+* In the repository that contains the workflow set the `ACTIONS_STEP_DEBUG` to `true`
 ## [Adding a workflow status badge](https://docs.github.com/en/actions/managing-workflow-runs/adding-a-workflow-status-badge)

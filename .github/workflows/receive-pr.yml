@@ -11,6 +11,10 @@ jobs:
 
     steps:        
       - uses: actions/checkout@v2
+      - run: ls -la
+      - run: env | sort
+      - run: echo owner - "${{ github.repository }}"
+      - run: echo repo - "${{ github.repository_owner }}"
 
       # imitation of a build process
       - name: Build
