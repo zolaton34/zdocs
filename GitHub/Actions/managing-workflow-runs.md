@@ -21,3 +21,8 @@ __Note: __ these debug logs are not visible in the UI but are included in the do
 * In the repository that contains the workflow set the `ACTIONS_STEP_DEBUG` to `true`
 __Note: __ these debug logs are not total visible in the UI but theses full logs are included in the download zip.
 ## [Adding a workflow status badge](https://docs.github.com/en/actions/managing-workflow-runs/adding-a-workflow-status-badge)
+You reference the workflow by the name of your workflow file.
+```bash
+![example workflow](https://github.com/<OWNER>/<REPOSITORY>/actions/workflows/<WORKFLOW_FILE>/badge.svg)
+```
+
