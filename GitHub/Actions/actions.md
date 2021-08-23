@@ -48,21 +48,36 @@ We can easily distinguish between major and minor versions.
 * Slower than other actions
 
 ### [Example of docker action](https://github.com/Zolaton/hello-world-docker-action)
-#### Action code
+#### Docker container action code
+* [Metadata file (action.yaml)](https://github.com/Zolaton/hello-world-docker-action/blob/5177c37e8a48ba85369842df0d8ae269274c8a01/action.yaml#L1)
+* [README](https://github.com/Zolaton/hello-world-docker-action#hello-world-docker-action)
 * [Dockerfile](https://github.com/Zolaton/hello-world-docker-action/blob/5177c37e8a48ba85369842df0d8ae269274c8a01/Dockerfile#L1)
 * [entrypoint.sh](https://github.com/Zolaton/hello-world-docker-action/blob/5177c37e8a48ba85369842df0d8ae269274c8a01/entrypoint.sh#L1)
   * This is container entrypoint
   * See in particular example of how to set an output in a bash script: `echo "::set-output name=time::$time"`
-  * [Metadata file (action.yam)](https://github.com/Zolaton/hello-world-docker-action/blob/5177c37e8a48ba85369842df0d8ae269274c8a01/action.yaml#L1)
-  * [README](https://github.com/Zolaton/hello-world-docker-action#hello-world-docker-action)
 
-#### Usage example
+#### Docker container action usage
   See [workflow](https://github.com/Zolaton/hello-world-docker-action/blob/fa2e217870a471382cd74d9417cc97a1852d89e9/.github/workflows/main.yaml#L1)
-
 
 ## [JavaScript actions](https://docs.github.com/en/actions/creating-actions/about-actions#javascript-actions)
 * Run directly on the runner
 * Must be pure Javascript (no other binaries)
+
+### [Example of javascript action](https://github.com/Zolaton/hello-world-javascript-action)
+#### Javascript action code
+Take note we initialized the project for node, including the required modules with the following commands
+```bash
+npm init -y
+npm install @actions/core
+npm install @actions/github
+```
+
+* [Metadata file (action.yml)](https://github.com/Zolaton/hello-world-javascript-action/blob/058f78e45f628fdabaa52d073374251df5c0c4e5/action.yml#L1)
+* [README](https://github.com/Zolaton/hello-world-javascript-action/blob/main/README.md#hello-world-javascript-action)
+* [index.js (actual action code)](https://github.com/Zolaton/hello-world-javascript-action/blob/058f78e45f628fdabaa52d073374251df5c0c4e5/index.js#L1)
+
+#### Javascript usage
+
 
 ## [Composite run steps actions](https://docs.github.com/en/actions/creating-actions/about-actions#composite-run-steps-actions)
 * Bundle different step into a single action. For example bundle run commands as a single step.
