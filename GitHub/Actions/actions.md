@@ -77,7 +77,14 @@ npm install @actions/github
 * [index.js (actual action code)](https://github.com/Zolaton/hello-world-javascript-action/blob/058f78e45f628fdabaa52d073374251df5c0c4e5/index.js#L1)
 
 #### Javascript usage
-
+See [workflow](https://github.com/Zolaton/hello-world-javascript-action/blob/058f78e45f628fdabaa52d073374251df5c0c4e5/.github/workflows/main.yaml#L1)
 
 ## [Composite run steps actions](https://docs.github.com/en/actions/creating-actions/about-actions#composite-run-steps-actions)
 * Bundle different step into a single action. For example bundle run commands as a single step.
+
+### [Example of composite run steps action](https://github.com/Zolaton/hello-world-composite-run-steps-action)
+#### Composite run steps code
+* [Metadata file (action.yml)](https://github.com/Zolaton/hello-world-composite-run-steps-action/blob/24232389148737ca3a0fdf0661128dec29be7557/action.yml#L1)
+
+#### Composite run steps usage
+See [workflow](https://github.com/Zolaton/hello-world-composite-run-steps-action/blob/24232389148737ca3a0fdf0661128dec29be7557/.github/workflows/main.yaml#L1)
