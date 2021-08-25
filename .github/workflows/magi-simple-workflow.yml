@@ -1,6 +1,6 @@
 name: Magi Simple Workflow
 on:
-  #push:
+  push:
   #pull_request:
   workflow_dispatch:
 jobs:
@@ -8,3 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Done with magi simple job"
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Done with a simple build"
