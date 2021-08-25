@@ -3,13 +3,12 @@ name: Environment
 on:
   push:
   pull_request:
-
   #  branches: [test-env] 
   workflow_dispatch:
 jobs:
   build:
     runs-on: ubuntu-latest
-    environment: test-env
+    environment: test
     steps:
       - uses: actions/checkout@v2
-      - run: echo Testing test-env environment
+      - run: echo Testing test environment
