@@ -4,7 +4,7 @@
 
 ## [Deploying to Amazon Elastic Container Service](https://docs.github.com/en/actions/guides/deploying-to-amazon-elastic-container-service)
 
-## [Deploying to Azure App Service](https://docs.github.com/en/actions/guides/deploying-to-azure-app-service](https://docs.github.com/en/actions/guides/deploying-to-azure-app-service)
+## [Deploying to Azure App Service](https://docs.github.com/en/actions/guides/deploying-to-azure-app-service)
 
 ## [Deploying to Google Kubernetes Engine](https://docs.github.com/en/actions/guides/deploying-to-google-kubernetes-engine)
 
