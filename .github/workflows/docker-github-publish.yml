@@ -4,6 +4,9 @@ on:
   release:
     types: [published]
 
+env:
+  REGISTRY: ghcr.io
+
 jobs:
   dockerhub_publish:
     name: DockerHub Publish
@@ -17,12 +20,13 @@ jobs:
         with:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
+          registry: ${{ env.REGISTRY }}
 
       - name: Extract metadata (tags, labels) for Docker
         id: meta
         uses: docker/metadata-action@98669ae865ea3cffbcbaa878cf57c20bbf1c6c38
         with:
-          images: ghcr.io/zolatoneli
+          images: zolaton34/zolatoneli
 
       - name: Build and push Docker image
         uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
