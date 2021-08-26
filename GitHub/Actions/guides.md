@@ -9,8 +9,7 @@
 ## [Deploying to Google Kubernetes Engine](https://docs.github.com/en/actions/guides/deploying-to-google-kubernetes-engine)
 
 ## [Using GitHub Actions for project management](https://docs.github.com/en/actions/guides/using-github-actions-for-project-management)
-TOC:
-https://docs.github.com/en/actions/guides/using-github-actions-for-project-management)
+### Table of contents:
 * Adding labels to issues
 * Removing a label when a card is added to a project board column
 * Moving assigned issues on project boards
