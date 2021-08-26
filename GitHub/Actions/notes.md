@@ -9,3 +9,7 @@
     * Take note that with __one specific check__ everything is blocked on the pr, but when enabling with the new comment the approval is for __all the workflows__
     * SUGGESTION: Always add at least one check to block merges with skip CI. (TODO: what if we do require manual approval of workflows ?)
 * Search of status check on the UI > Protected branches is based on the job name, not the worklow name. 
+* Using GitHub packages as docker registry
+  * It looks like there are name restrictions.
+  * Does not seem to work if name is not `gghcr.io/${{ github.repository }}:<tag>`
+  * Does it means we only can have one docker repository for one github repository?
