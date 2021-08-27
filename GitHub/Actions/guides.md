@@ -1,8 +1,12 @@
 # GitHub Action Guides
 
 ## [Publishing Docker images](https://docs.github.com/en/actions/guides/publishing-docker-images)
+* [Publish to DockerHub](https://github.com/Zolaton/zdocs/blob/edf982ff48630f91e103dc22fba8e43456752cb1/.github/workflows/dockerhub-publish.yml#L1)
+* [Publish as GitHub package](https://github.com/Zolaton/zdocs/blob/edf982ff48630f91e103dc22fba8e43456752cb1/.github/workflows/docker-github-publish.yml#L1)
+* [Publish to DockerHub & as GitHub package](https://github.com/Zolaton/zdocs/blob/edf982ff48630f91e103dc22fba8e43456752cb1/.github/workflows/docker-multi-reg-publish.yml#L1)
 
 ## [Deploying to Amazon Elastic Container Service](https://docs.github.com/en/actions/guides/deploying-to-amazon-elastic-container-service)
+* TODO
 
 ## [Deploying to Azure App Service](https://docs.github.com/en/actions/guides/deploying-to-azure-app-service)
 ### [Prerequisites](https://docs.github.com/en/actions/guides/deploying-to-azure-app-service#prerequisites)
@@ -21,6 +25,7 @@
 * See [workflow code](https://github.com/Zolaton/zdocs/blob/11324953d167ed173abc05b9ef74b84a3567f72c/.github/workflows/azure-publish.yml#L1).
 
 ## [Deploying to Google Kubernetes Engine](https://docs.github.com/en/actions/guides/deploying-to-google-kubernetes-engine)
+* TODO
 
 ## [Using GitHub Actions for project management](https://docs.github.com/en/actions/guides/using-github-actions-for-project-management)
 ### Table of contents:
