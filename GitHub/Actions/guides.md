@@ -5,6 +5,18 @@
 ## [Deploying to Amazon Elastic Container Service](https://docs.github.com/en/actions/guides/deploying-to-amazon-elastic-container-service)
 
 ## [Deploying to Azure App Service](https://docs.github.com/en/actions/guides/deploying-to-azure-app-service)
+### [Prerequisites](https://docs.github.com/en/actions/guides/deploying-to-azure-app-service#prerequisites)
+* Run:
+  ```bash
+  az login
+  # Create resource group
+  az group create -l canadaeast -n mikatu
+  # Create an Azure App Service plan
+  az appservice plan create --resource-group mikatu --name jikalo-service-plan --is-linux
+  # Create a web app.
+  az webapp create --name jikalo-web --plan jikalo-service-plan --resource-group mikatu --runtime "node|10.14"
+  ```
+* TODO
 
 ## [Deploying to Google Kubernetes Engine](https://docs.github.com/en/actions/guides/deploying-to-google-kubernetes-engine)
 
@@ -18,3 +30,6 @@
 * Scheduling issue creation
 
 ## [Using GitHub CLI in workflows](https://docs.github.com/en/actions/guides/using-github-cli-in-workflows)
+az group create -l canadaeast -n mikatu
+az appservice plan create --resource-group mikatu --name jikalo-service-plan --is-linux
+az webapp create --name jikalo-web --plan jikalo-service-plan --resource-group mikatu --runtime "node|10.14"
