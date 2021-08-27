@@ -25,7 +25,17 @@
 * See [workflow code](https://github.com/Zolaton/zdocs/blob/11324953d167ed173abc05b9ef74b84a3567f72c/.github/workflows/azure-publish.yml#L1).
 
 ## [Deploying to Google Kubernetes Engine](https://docs.github.com/en/actions/guides/deploying-to-google-kubernetes-engine)
-* TODO
+### [Prerequisites](https://docs.github.com/en/actions/guides/deploying-to-google-kubernetes-engine#prerequisites)
+* Run
+  ```bash
+  # Create project
+  GKE_CLUSTER=lozatar
+  GKE_PROJECT=bold-tear-memphis
+  GKE_ZONE=us-east4-b
+
+  gcloud container clusters create $GKE_CLUSTER --project=$GKE_PROJECT --zone=$GKE_ZONE
+
+  ```
 
 ## [Using GitHub Actions for project management](https://docs.github.com/en/actions/guides/using-github-actions-for-project-management)
 ### Table of contents:
