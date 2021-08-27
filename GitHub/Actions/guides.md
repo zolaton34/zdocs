@@ -16,7 +16,7 @@
   # Create a web app.
   az webapp create --name jikalo-web --plan jikalo-service-plan --resource-group mikatu --runtime "node|10.14"
   ```
-* TODO
+* Configure an Azure publish profile and create an `AZURE_WEBAPP_PUBLISH_PROFILE` secret. (See [Generate deployment credentials](https://docs.microsoft.com/en-us/azure/app-service/deploy-github-actions?tabs=applevel#generate-deployment-credentials) and [Encrypted secrets](https://docs.github.com/en/actions/reference/encrypted-secrets#creating-encrypted-secrets-for-a-repository))
 
 ## [Deploying to Google Kubernetes Engine](https://docs.github.com/en/actions/guides/deploying-to-google-kubernetes-engine)
 
