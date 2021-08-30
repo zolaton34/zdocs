@@ -35,8 +35,8 @@
 * TODO: to be completed. Depends on billing?
 
 ## [Using GitHub Actions for project management](https://docs.github.com/en/actions/guides/using-github-actions-for-project-management)
-### Table of contents:
-* Adding labels to issues
+### Examples
+* [Adding labels to issues](https://github.com/Zolaton/zdocs/blob/23205062e169ba19cff4540ca2524e23db591b5d/.github/workflows/add-label-to-issues.yml#L1)
 * Removing a label when a card is added to a project board column
 * Moving assigned issues on project boards
 * Commenting on an issue when a label is added
