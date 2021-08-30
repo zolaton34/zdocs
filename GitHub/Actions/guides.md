@@ -44,6 +44,4 @@
 * Scheduling issue creation
 
 ## [Using GitHub CLI in workflows](https://docs.github.com/en/actions/guides/using-github-cli-in-workflows)
-az group create -l canadaeast -n mikatu
-az appservice plan create --resource-group mikatu --name jikalo-service-plan --is-linux
-az webapp create --name jikalo-web --plan jikalo-service-plan --resource-group mikatu --runtime "node|10.14"
+
