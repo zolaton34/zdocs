@@ -1,8 +1,9 @@
 name: Move assigned card
 on:
-  issues:
-    types:
-      - assigned
+  #issues:
+  #  types:
+  #    - assigned
+  workflow_dispatch:
 jobs:
   move-assigned-card:
     runs-on: ubuntu-latest
