@@ -29,13 +29,10 @@
 * Run
   ```bash
   # Create project
-  GKE_CLUSTER=lozatar
-  GKE_PROJECT=bold-tear-memphis
-  GKE_ZONE=us-east4-b
-
-  gcloud container clusters create $GKE_CLUSTER --project=$GKE_PROJECT --zone=$GKE_ZONE
+  gcloud container clusters create lozatar-cluster --project=mulqatu-project --zone=us-east4-b
 
   ```
+* TODO: to be completed. Depends on billing?
 
 ## [Using GitHub Actions for project management](https://docs.github.com/en/actions/guides/using-github-actions-for-project-management)
 ### Table of contents:
