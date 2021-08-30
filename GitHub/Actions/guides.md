@@ -38,7 +38,7 @@
 ### Examples
 * [Adding labels to issues](https://github.com/Zolaton/zdocs/blob/23205062e169ba19cff4540ca2524e23db591b5d/.github/workflows/add-label-to-issues.yml#L1)
 * [Removing a label when a card is added to a project board column](https://github.com/Zolaton/zdocs/blob/27e2c3fb3a518b170dcbfe220a64080ec8bc8782/.github/workflows/remaining-open-issues.yml#L1)
-* Moving assigned issues on project boards
+* [Moving assigned issues on project boards](https://github.com/Zolaton/zdocs/blob/6aca6212bc05fb65579e6532ee05301d6e72cb64/.github/workflows/moving-assigned-issues.yml#L1)
 * Commenting on an issue when a label is added
 * Closing inactive issues
 * Scheduling issue creation
