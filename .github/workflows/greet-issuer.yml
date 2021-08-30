@@ -1,4 +1,6 @@
 name: Comment when opened
+permissions:
+  issues: write
 on:
   issues:
     types:
