@@ -5,7 +5,7 @@ on:
       - moved
 jobs:
   remove_labels:
-    if: github.event.project_card.column_id == '15740961' || github.event.project_card.column_id == '15740962'
+    if: github.event.project_card.column_id == '15740961'
     runs-on: ubuntu-latest
     permissions:
       issues: write
@@ -14,5 +14,5 @@ jobs:
       - name: remove labels
         uses: andymckay/labeler@5c59dabdfd4dd5bd9c6e6d255b01b9d764af4414
         with:
-          remove-labels: "help wanted"
+          remove-labels: help wanted
           repo-token: ${{ secrets.GITHUB_TOKEN }}
