@@ -44,5 +44,6 @@
 * Scheduling issue creation
 
 ## [Using GitHub CLI in workflows](https://docs.github.com/en/actions/guides/using-github-cli-in-workflows)
-Examples:
+Code examples:
 * [Comment action opening](https://github.com/Zolaton/zdocs/blob/f7ef081197348e04be3140b4b1e87b40ae6ef706/.github/workflows/greet-issuer.yml#L1)
+* [Execute API calls through GitHub CLI]()
