@@ -1,7 +1,7 @@
 name: Magi Simple Workflow
 on:
-  push:
-  pull_request:
+  #push:
+  #pull_request:
   workflow_dispatch:
 jobs:
   magi-simple-job:
