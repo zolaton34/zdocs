@@ -1,4 +1,9 @@
 name: Move assigned card
+permissions:
+  issues: write
+  repository-projects: write
+  contents: write
+
 on:
   issues:
     types:
