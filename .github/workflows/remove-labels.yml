@@ -12,7 +12,8 @@ jobs:
       pull-requests: write
     steps:
       - name: remove labels
-        uses: andymckay/labeler@5c59dabdfd4dd5bd9c6e6d255b01b9d764af4414
+        #uses: andymckay/labeler@5c59dabdfd4dd5bd9c6e6d255b01b9d764af4414
+        uses: andymckay/labeler@525cf14ca9981d0c28742d10375f1675ca07a75a
         with:
           remove-labels: help wanted
           repo-token: ${{ secrets.GITHUB_TOKEN }}
