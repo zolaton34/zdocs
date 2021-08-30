@@ -1,9 +1,4 @@
 name: Move assigned card
-permissions:
-  issues: write
-  repository-projects: write
-  contents: write
-
 on:
   issues:
     types:
@@ -16,4 +11,4 @@ jobs:
         with:
           project: Zdoc Kanban
           column: In progress
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          repo-token: ${{ secrets.REPO_TOKEN }}
