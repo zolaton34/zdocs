@@ -40,8 +40,8 @@
 * [Removing a label when a card is added to a project board column](https://github.com/Zolaton/zdocs/blob/27e2c3fb3a518b170dcbfe220a64080ec8bc8782/.github/workflows/remaining-open-issues.yml#L1)
 * [Moving assigned issues on project boards](https://github.com/Zolaton/zdocs/blob/6aca6212bc05fb65579e6532ee05301d6e72cb64/.github/workflows/moving-assigned-issues.yml#L1)
 * [Commenting on an issue when a label is added](https://github.com/Zolaton/zdocs/blob/774489f3162697e2e9edf1b19a4ae4d7195fe280/.github/workflows/comment-on-label.yml#L1)
-* [Closing inactive issues]()
-* Scheduling issue creation
+* [Closing inactive issues](https://github.com/Zolaton/zdocs/tree/feac24e638024f5850a6d24ffa409d59d2aeac01)
+* [Scheduling issue creation]()
 
 ## [Using GitHub CLI in workflows](https://docs.github.com/en/actions/guides/using-github-cli-in-workflows)
 Code examples:
