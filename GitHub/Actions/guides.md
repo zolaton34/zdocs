@@ -46,4 +46,4 @@
 ## [Using GitHub CLI in workflows](https://docs.github.com/en/actions/guides/using-github-cli-in-workflows)
 Code examples:
 * [Comment action opening](https://github.com/Zolaton/zdocs/blob/f7ef081197348e04be3140b4b1e87b40ae6ef706/.github/workflows/greet-issuer.yml#L1)
-* [Execute API calls through GitHub CLI](https://github.com/Zolaton/zdocs/blob/8c49e0339c557f92813bb5bcf3bb4e739e6f2e3b/.github/workflows/rename-open-issues.yml#L1)
+* [Execute API calls through GitHub CLI](https://github.com/Zolaton/zdocs/blob/39c07c2197d672836791bf7a53e1720efcee357e/.github/workflows/remaining-open-issues.yml#L1)
