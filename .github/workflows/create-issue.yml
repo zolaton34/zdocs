@@ -13,9 +13,9 @@ jobs:
       - name: Create team sync issue
         uses: imjohnbo/issue-bot@3daae12aa54d38685d7ff8459fc8a2aee8cea98b
         with:
-          assignees: "monalisa, doctocat, hubot"
-          labels: "weekly sync, docs-team"
-          title: "Team sync"
+          assignees: zolaton34, magiqo21
+          labels: weekly sync, docs team
+          title: Team sync
           body: |
             ### Agenda
 
