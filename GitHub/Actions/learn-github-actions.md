@@ -431,6 +431,16 @@ Recommended approaches for accessing repository data within a workflow, in desce
 4. SSH keys on a user account
   * DO NOT USE IT
 
+### [Considering cross-repository access](https://docs.github.com/en/actions/learn-github-actions/security-hardening-for-github-actions#considering-cross-repository-access)
+Recommended approaches for accessing repository data within a workflow, in descending order of preference
+1. `GITHUB_TOKEN`
+2. Repository deploy key
+  * One of the only credential types that grant read or write access to a single repository
+  * Can be used to interact with another repository
+  * Can only clone or push to the git repository
+  * Cannot give access to the REST or GraphQL API
+  * see [Managing deploy keys](https://docs.github.com/en/developers/overview/managing-deploy-keys#deploy-keys)
+
 ### [Hardening for self-hosted runners](https://docs.github.com/en/actions/learn-github-actions/security-hardening-for-github-actions#hardening-for-self-hosted-runners)
 * Prefer _GitHub-hosted runners_ that are ephemeral virtual machine
 * _Self-hosted_ runners on GitHub can be persistently compromised by untrusted code in a workflow
