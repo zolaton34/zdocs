@@ -67,3 +67,14 @@ For compliance or legal purpose.
 * Apply tags to resources
   * To logically organize the resources
   * Clarify costs and billing
+
+## [Hierarchy of management groups and subscriptions](https://docs.microsoft.com/en-us/learn/modules/azure-architecture-fundamentals/management-groups-subscriptions)
+* Up to 10,000 management groups in a single directory
+* A management support up to six levels of depth
+  * Not included root level or subscription level
+* Each management group and subscription can have only one parent
+* Each management group can have many children
+* All subscriptions and management groups are within a single hierarchy in each directory
+
+![Hierarchy of management groups and subscriptions](https://docs.microsoft.com/en-us/learn/modules/azure-architecture-fundamentals/management-groups-subscriptions)
+
