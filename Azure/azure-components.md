@@ -12,7 +12,7 @@ Top-down hierarchy:
     * Boundaries
       * Billing boundary
       * Access control boundary
-      ![Subscriptions]()
+      ![Subscriptions](https://docs.microsoft.com/en-us/learn/azure-fundamentals/azure-architecture-fundamentals/media/subscriptions-afe063a7.png)
 * __Resource groups__
   * Logical container where Azure resources are deployed and managed
   * A scope for role-based access control (RBAC) permissions
