@@ -13,6 +13,8 @@
   * __H-Series__ High Performance Computing virtual machines
   * __Ls-Series__ Storage optimized virtual machines
   * __M-Series__ Memory optimized virtual machines
+* Reserved instance can decrease costs versus pay-as-you-go
+
 ### [Virtual Machine Sets](https://azure.microsoft.com/en-us/services/virtual-machine-scale-sets/)
 * Compute resource to deploy and manage a set of identical VMs
 ### [Kubernetes](https://azure.microsoft.com/en-us/services/kubernetes-service/)
