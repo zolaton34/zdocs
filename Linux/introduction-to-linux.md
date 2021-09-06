@@ -177,3 +177,33 @@ $ sudo systemctl enable|disable httpd
   * font size
   * etc.
 
+### System Configuration from the Graphical Interface
+#### Installing and Updating Software (Debian)
+* __dpkg__ underlying package manager
+  * Advanced Package Tool (APT) = higher-level package management system
+    * Interfaces to APT. Examples
+      * apt
+      * apt-get
+      * synaptic
+      * gnome-software
+      * Ubuntu Software Center
+* Most repositories target a particular distribution
+* Often software distributors ship with multiple repositories to support multiple distributions
+
+#### Installing and Updating Software (SUSE/openSUSE, Mageia, CentOS, Oracle Linux)
+* __rpm__ underlying package manager
+  * higher-level package management system
+    * yum
+    * dfn
+    * zypper (SUSE)
+
+## Processes
+### Listing Processes: ps and top
+#### Interactive Keys with top
+* __t__  Display or hide summary information (rows 2 and 3)
+* __m__  Display or hide memory information (rows 4 and 5)
+* __A__  Sort the process list by top resource consumers
+* __r__  Renice (change the priority of) a specific processes
+* __k__  Kill a specific process
+* __f__  Enter the top configuration screen
+* __o__  Interactively select a new sort order in the process list
