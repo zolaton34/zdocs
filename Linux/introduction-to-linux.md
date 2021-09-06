@@ -207,3 +207,4 @@ $ sudo systemctl enable|disable httpd
 * __k__  Kill a specific process
 * __f__  Enter the top configuration screen
 * __o__  Interactively select a new sort order in the process list
+* __h__  Help on interactive keys
