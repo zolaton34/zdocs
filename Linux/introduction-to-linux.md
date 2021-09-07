@@ -211,6 +211,13 @@ $ sudo systemctl enable|disable httpd
 
 ## User Environment
 ### Order of the Startup Files
+ `/etc/profile` is executed first then,
 1. `~/.bash_profile`
 2. `~/.bash_login`
 3. `~/.profile`
+
+* Executes on login
+* Only the first script in the numbered list that is found is run
+* Then for all every new shell or terminal without login, `.bashrc` is run
+
+Usually user customize `.bashrc` since it is always run
