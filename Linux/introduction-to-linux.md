@@ -208,3 +208,9 @@ $ sudo systemctl enable|disable httpd
 * __f__  Enter the top configuration screen
 * __o__  Interactively select a new sort order in the process list
 * __h__  Help on interactive keys
+
+## User Environment
+### Order of the Startup Files
+1. `~/.bash_profile`
+2. `~/.bash_login`
+3. `~/.profile`
