@@ -221,3 +221,35 @@ $ sudo systemctl enable|disable httpd
 * Then for all every new shell or terminal without login, `.bashrc` is run
 
 Usually user customize `.bashrc` since it is always run
+
+## Network Operations
+### Networking Configuration and Tools
+* Config files
+  * `/etc/hosts;
+  * `/etc/resolv.conf`
+* Information about host names and IPs
+  * host
+  * nslookup
+  * dig
+* Network Manager
+  * nmtui
+  * nmcli
+* Network Interfaces
+  * ifconfig
+  * ip (newer and far more capabilities)
+  * Command examples
+    * Show current routing table `route -n` or `ip route`
+    * Add static route `route add -net address` or `ip route add`
+    * Delete static route `route del -net address` or `ip route del`
+* traceroute
+  * to isolate connectivity issues
+  * `traceroute www.linuxfoundation.org`
+
+#### Other Networking Tools
+* `ethtool` Queries network interfaces and can also set various parameters such as the speed
+* `netstat` Displays all active connections and routing tables; useful for monitoring performance and troubleshooting
+* `nmap` Scans open ports on a network; important for security analysis
+* `tcpdump` Dumps network traffic for analysis
+* `iptraf` Monitors network traffic in text mode
+* `mtr` Combines functionality of ping and traceroute and gives a continuously updated display
+* `dig` Tests DNS workings; a good replacement for host and nslookup
