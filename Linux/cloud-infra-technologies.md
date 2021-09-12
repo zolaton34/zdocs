@@ -5,7 +5,7 @@
   * runs directly on top of a physical host machine's hardware, without the need for a host OS
 * examples
   * IBM z/VM
-  * Microsoft Hyper-V 
+  * Microsoft Hyper-V
   * VMware ESXi
   * AWS Nitro
   * Xen
@@ -15,7 +15,7 @@
 * examples:
   * VirtualBox
   * VMware Player
-  * VMware Workstation 
+  * VMware Workstation
   * Parallels Desktop for Mac
 #### Mix Type-1 & Type-2  hypervisor
 * KVM
@@ -157,8 +157,46 @@ to manage
 ## Microservices
 * Microservices
 
-## Software-Defined Networking and Networking for Containers
-* Software-Defined Networking (SDN)
+## Software-Defined Networking (SDN) and Networking for Containers
+* Decouples the network control layer from the traffic forwarding layer
+#### SDN Architecture
+* __Data Plane__
+  * also called the Forwarding Plane
+  * handles data packets and apply actions to them based on rules which we program into lookup-tables
+* __Control Plane__
+* Control Plane
+  * calculates and programms the actions for the Data Plane.
+  * make the forwarding decisions
+  * implements services like:
+    * Quality of Service (QoS)
+    * VLANs
+    * ...
+* __Management Plane_ where we can
+  * configure
+  * monitor
+  * and manage the network devices
+
+#### Activities Performed by a Network Device
+* Network device perform following activities
+  * __Ingress and egress packets__
+    * performed at the lowest layer
+    * decides what to do with ingress packets
+      * which packets to forward, based on forwarding tables
+    * activities are mapped as Data Plane activities
+      * All routers, switches, modem, etc. are part of this plane
+  * __Collect, process, and manage the network information__
+    * collect, process, and manage the network information
+    * network device makes the forwarding decisions
+    * which the Data Plane follows
+    * activities are mapped by the Control Plane activities
+      * some of the protocols which run on the Control Plane are routing and adjacent device discovery
+  * __Monitor and manage the network__
+    * with tools available in the Management Plane, interact with the network device to
+    * configure it
+    * and monitor it with tools like SNMP (Simple Network Management Protocol)
+##### SDN Framework
+[!SND Framework](https://courses.edx.org/assets/courseware/v1/75cf2c883adc3d24bb86f506c1c49474/asset-v1:LinuxFoundationX+LFS151.x+2T2020+type@asset+block/LFS151-SDN-Framework.png)
+
 * Networking for Containers
 * Docker Single-Host Networking
 * Docker Multi-Host Networking
