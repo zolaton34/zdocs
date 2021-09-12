@@ -195,7 +195,7 @@ to manage
     * configure it
     * and monitor it with tools like SNMP (Simple Network Management Protocol)
 ##### SDN Framework
-[SND Framework!](https://courses.edx.org/assets/courseware/v1/75cf2c883adc3d24bb86f506c1c49474/asset-v1:LinuxFoundationX+LFS151.x+2T2020+type@asset+block/LFS151-SDN-Framework.png)
+![SND Framework](https://courses.edx.org/assets/courseware/v1/75cf2c883adc3d24bb86f506c1c49474/asset-v1:LinuxFoundationX+LFS151.x+2T2020+type@asset+block/LFS151-SDN-Framework.png)
 
 * Networking for Containers
 * Docker Single-Host Networking
