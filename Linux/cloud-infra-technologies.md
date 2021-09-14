@@ -134,7 +134,6 @@ to manage
 * Project Moby
 
 ## Containers: Micro OSes for Containers
-* Introduction and Learning Objectives
 * Alpine Linux
 * Atomic Host
 * Fedora CoreOS
@@ -143,13 +142,48 @@ to manage
 * VMware Photon
 
 ## Containers: Container Orchestration
-* Introduction and Learning Objectives
-* Docker Swarm
-* Kubernetes
-* Deploying Containers with Apache Mesos
-* Nomad by HashiCorp
-* Kubernetes Hosted Solutions
-* Cloud Container Orchestration Services
+### Docker Swarm
+### Kubernetes
+#### Kubernetes Architecture - Key Components
+  * __Cluster__ group of hosts and  other infrastructure resources
+  * __Master Node__
+    * Schedule pods
+    * Manage worker nodes
+    * Main components
+      * kube-apiserver
+      * etcd
+      * kube-scheduler
+      * kube-controller-manager
+    * High Availability possible with multiple Master Nodes
+  * __Worker Node__
+    * Host to run pods
+    * Runs a daemon called __kubelet__ to communicate with the master node
+    * Runs __kube-proxy__, a network proxy for communication to the external world
+  * __ Namespace__
+    * partitions logically the cluster into sub-clusters
+    * provides isolation for
+      * projects
+      * applications
+      * users
+      * teams
+#### Kubernetes Architecture - Key API Ressources
+* Pod
+* ReplicaSet
+* Deployment
+* Service
+* Label
+* Selector
+* Volume
+#### Kubernetes Hosted Solutions
+* Amazon Elastic Kubernetes Service
+* Azure Kubernetes Service
+* Google Kubernetes Engine
+* IBM Cloud Kubernetes Service
+* NetApp Project Astra
+* Oracle Container Engine for Kubernetes
+* Red Hat OpenShift
+* VMware Tanzu Kubernetes Grid
+* Mirantis Kubernetes Engine
 
 ## Unikernels
 * Unikernels
@@ -159,7 +193,7 @@ to manage
 
 ## Software-Defined Networking (SDN) and Networking for Containers
 * Decouples the network control layer from the traffic forwarding layer
-#### SDN Architecture
+### SDN Architecture
 * __Data Plane__
   * also called the Forwarding Plane
   * handles data packets and apply actions to them based on rules which we program into lookup-tables
@@ -176,7 +210,7 @@ to manage
   * monitor
   * and manage the network devices
 
-#### Activities Performed by a Network Device
+### Activities Performed by a Network Device
 * Network device perform following activities
   * __Ingress and egress packets__
     * performed at the lowest layer
@@ -194,22 +228,58 @@ to manage
     * with tools available in the Management Plane, interact with the network device to
     * configure it
     * and monitor it with tools like SNMP (Simple Network Management Protocol)
-#### SDN Framework
+
+### SDN Framework
 ![SND Framework](https://courses.edx.org/assets/courseware/v1/75cf2c883adc3d24bb86f506c1c49474/asset-v1:LinuxFoundationX+LFS151.x+2T2020+type@asset+block/LFS151-SDN-Framework.png)
 
-* Networking for Containers
-* Docker Single-Host Networking
-* Docker Multi-Host Networking
-* Docker Network Driver Plugins
-* Kubernetes Networking
-* Cloud Foundry: Container to Container Networking
+### Networking for Containers
+* Two standards for container networking
+  * Container Network Model (CNM)
+    * Mostly [developped by Docker](https://github.com/moby/libnetwork/blob/master/docs/design.md)
+  * Container Networking Interface (CNI)
+    * [Cloud Native Computing Foundation (CNCF) project](https://www.cncf.io/)
+* Service Discovery
+  * mechanism for processes and services to 
+    * find each other automatically 
+    * talk to each other
+  * Two steps
+    * Registration
+      * with etc, Consul..
+    * Lookup
+      * usually supported with DNS
 
-## Software-Defined Storage and Storage Management for Containers
-* Ceph
-* GlusterFS
-* Storage Management for Containers
-* Volume Plugins for Docker
-* Volume Management in Kubernetes
+### Software-Defined Storage
+* __Ceph__
+  * designed for performance, reliability and scalability
+  * object, block, and file system storage
+  * flexible, highly reliable, and easy to manage
+* __GlusterFS__
+  * media streaming
+  * data analysis
+  * data- and bandwidth-intensive tasks
+* __FreeNAS__ File, Block, and Object Sharing
+* __LINBIT__ Block Storage
+* __MinIO__
+  * Object Storage
+  * S3 Compatible
+* Nexenta
+* OpenEBS
+* OpenSDS
+* Soda Dock
+* VMware vSAN+
+#### [Volume Management in Kubernetes](https://kubernetes.io/docs/concepts/storage/volumes)
+* Ephemeral Volume
+  * Same lifecycle as Pod
+  * Deleted when Pod is deleted
+  * Preserved between restarts
+* Persistent Volumes
+  * Lifecycle independant of Pod
+  * Preserved when Pod is deleted
+  * Can be shared between Pods
+##### [Types of Volumes](https://kubernetes.io/docs/concepts/storage/volumes/#volume-types)
+
+
+
 * Container Storage Interface (CSI)
 * Cloud Foundry Volume Service
 
@@ -221,14 +291,12 @@ to manage
 * Cloud Native CI/CD
 
 ## Tools for Cloud Infrastructure I (Configuration Management)
-* Introduction and Learning Objectives
 * Ansible
 * Puppet
 * Chef
 * Salt Open
 
 ## Tools for Cloud Infrastructure II (Build & Release)
-* Introduction and Learning Objectives
 * Terraform
 * CloudFormation
 * BOSH
